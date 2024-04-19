@@ -70,9 +70,11 @@ export default function Timeline({timelineData}) {
 
   return (
     <div>
-    <div className=" bg-red-200 flex flex-col">
+    <div className=" bg-red-200 flex flex-col py-4 gap-3">
+
+      {/* div containing the filter button */}
       <div className='relative'>
-        <button onClick={() => setShowFilter(c => !c)}>Filter</button>
+        <button className='bg-[#c2c2c2] rounded-md' onClick={() => setShowFilter(c => !c)}>Filter</button>
         <div className={`absolute top-full z-20 left-0 bg-blue-300 ${showFilter ? "flex flex-col" : "hidden"}`}>
           <ul>
             {categories.map((category, index) => (
@@ -84,6 +86,8 @@ export default function Timeline({timelineData}) {
           </ul>
         </div>
       </div>
+
+      {/* div containing the bar where the years are shown */}
       <div className="relative py-5 bg-red-400 overflow-x-auto">
         <div
           style={{
@@ -100,25 +104,29 @@ export default function Timeline({timelineData}) {
           ))}
         </div>
       </div>
+
+      {/* gray area to simulate the middle point or arrow */}
       <div className='grid grid-cols-2 h-4'>
         <div className='bg-gray-300'></div>
         <div className='bg-gray-400'></div>
       </div>
+
+      {/* buttons for the slider */}
       <div className='flex justify-center gap-2 py-2'>
-      <button className='px-4 py-1 bg-gray-300' onClick={() => {
-        const currentIndex = decades.indexOf(desiredYear);
-        if (currentIndex > 0) { // Check if it's not the first year
-          setDesiredYear(decades[currentIndex - 1]);
-        }
-      }}>{"<"}</button>
-<button className='px-4 py-1 bg-gray-300' onClick={() => {
-  const currentIndex = decades.indexOf(desiredYear.toString());
-  console.log(currentIndex, "currentIndex")
-  if (currentIndex < decades.length - 1) { // Check if it's not the last year
-    console.log("clicked")
-    setDesiredYear(decades[currentIndex + 1]);
-  }
-}}>{">"}</button>
+        <button className='px-4 py-1 bg-gray-300' onClick={() => {
+          const currentIndex = decades.indexOf(desiredYear);
+          if (currentIndex > 0) { // Check if it's not the first year
+            setDesiredYear(decades[currentIndex - 1]);
+          }
+        }}>{"<"}</button>
+        <button className='px-4 py-1 bg-gray-300' onClick={() => {
+          const currentIndex = decades.indexOf(desiredYear.toString());
+          console.log(currentIndex, "currentIndex")
+          if (currentIndex < decades.length - 1) { // Check if it's not the last year
+            console.log("clicked")
+            setDesiredYear(decades[currentIndex + 1]);
+          }
+        }}>{">"}</button>
       </div>
     </div>
 
