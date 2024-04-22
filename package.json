@@ -17,6 +17,7 @@
     "sanity": "^3.37.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.12",
     "eslint": "^8",
     "eslint-config-next": "14.2.1",
     "postcss": "^8",
