@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --Mainblue: #162743;
-  --Mellanblå: #0479ae;
+  --mainblue: #162743;
+  --mellanblå: #0479ae;
   --offwhite: #edebe7;
 }

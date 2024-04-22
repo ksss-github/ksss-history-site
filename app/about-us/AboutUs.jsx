@@ -6,8 +6,8 @@ import "./AboutUs.css"
 const AboutUs = () => {
   return (
     <div>
-      <div className="header-box text-base bg-gray-200 mt-2 p-3 ">
-        <h1 className="font-extrabold mb-0 text-xl prose lg:prose-xl text-center">The Historical Committee</h1>
+      <div className="header-box text-base p-3 ">
+        <h1 className="headertext font-extrabold mb-0 text-xl prose lg:prose-xl text-center">The Historical Committee</h1>
         <p className="text-xs text-center leading-4 px-5">
           KSSS has since 2.5 years back formed a Historical Committee (HC) with
           the task of mapping what we have, for example books, photos, films,
