@@ -12,7 +12,10 @@ export async function getTimeline(){
         _id,
         _createdAt,
         title,
-        tags,
+        "tagIds": tags[]->value.current,
+        "tags": tags[]->{ 
+          "id": value.current
+      },
         "slug": slug.current,
         date,
         location,
@@ -88,4 +91,8 @@ export async function getFullEvent( slug ){
 //     console.error('Error fetching timeline:', error);
 //     return [];
 //   }
+// }
+//        "tags": tags[]->{ 
+//   "title": name,
+//   "id": value.current
 // }

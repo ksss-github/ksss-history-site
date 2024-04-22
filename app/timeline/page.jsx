@@ -7,7 +7,7 @@ export const fetchCache = 'force-no-store';
 
 export default async function TimelinePage() {
   const timeline = await getTimeline();
-
+  console.log(timeline, "timeline")
   return (
     <div>
       <Timeline timelineData={timeline} />
