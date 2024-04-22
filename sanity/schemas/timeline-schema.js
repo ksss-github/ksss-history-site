@@ -10,24 +10,34 @@ const timeline = {
       validation: (Rule) => Rule.required(),
       description: "Title of the event."
     },
+    // {
+    //   name: "tags",
+    //   title: "Tags",
+    //   description: "Tags for categorizing the event and filter. At least one tag is required.",
+    //   validation: (Rule) => Rule.required(),
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "string",
+    //     },
+    //   ],
+    //   options: {
+    //     list: [
+    //       { title: "Main timeline", value: "main-timeline" },
+    //       { title: "Gotland Runt", value: "gotland-runt" },
+    //       { title: "Racing", value: "racing" },
+    //     ],
+    //     layout: "grid",
+    //   },
+    // },
     {
-      name: "tags",
       title: "Tags",
-      description: "Tags for categorizing the event and filter. At least one tag is required.",
-      validation: (Rule) => Rule.required(),
+      name: "tags",
       type: "array",
-      of: [
-        {
-          type: "string",
-        },
-      ],
-      options: {
-        list: [
-          { title: "Gotland Runt", value: "gotland-runt" },
-          { title: "Racing", value: "racing" },
-        ],
-        layout: "grid",
-      },
+      of: [{
+        type: "reference",
+        to: [{ type: "tags" }]
+      }]
     },
     {
       name: "slug",
