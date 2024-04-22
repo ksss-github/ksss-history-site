@@ -31,13 +31,13 @@ const AboutUs = () => {
       <section className="prose-sm p-4">
         <p>
         We archive most of the material in a digital
- archive on Google Drive where we organize
- the collection according to a timeline from
- the beginning of 1830. To be able to
- distribute the work, it is divided into main
- groups according to KSSS activities with a
- person responsible for each main group.
- This work will continue as long as the Club exists but of course very intensive right now as we have the first 200 years of history to collect and document.
+        archive on Google Drive where we organize
+        the collection according to a timeline from
+        the beginning of 1830. To be able to
+        distribute the work, it is divided into main
+        groups according to KSSS activities with a
+        person responsible for each main group.
+        This work will continue as long as the Club exists but of course very intensive right now as we have the first 200 years of history to collect and document.
         </p>
       </section>
 

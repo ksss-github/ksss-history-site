@@ -21,7 +21,7 @@ export default function RootLayout({
           <Link href="/"> HOME </Link>
           <Link href="/timeline"> TIMELINE </Link>
           <Link href="/"> YEAR BOOKS </Link>
-          <Link href="/aboutus"> About Us</Link>
+          <Link href="/aboutuspage"> About Us</Link>
           </nav>
         </header>
         
