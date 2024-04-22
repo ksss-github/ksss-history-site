@@ -9,9 +9,9 @@
   flex-direction: column;
   background-color: var(--Mainblue);
   align-self: center;
-  padding: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
   color: var(--offwhite);
 }
 
