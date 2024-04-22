@@ -1,3 +1,43 @@
 .footer-container {
   background-color: var(--offwhite);
+  padding: 2rem;
+}
+
+.kontak-container {
+}
+
+.kontak-text {
+  margin-left: 0.7rem;
+}
+
+.email-info,
+.number-info {
+  display: flex;
+  flex-direction: row;
+  font-weight: 200;
+}
+
+.text-sm {
+  margin-top: 1rem;
+  margin-left: 0.7rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.website-container {
+  margin-top: 1.2rem;
+  line-height: 1rem;
+  margin-left: 0.7rem;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-style: un;
+  text-decoration: underline;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import kssFlag from "../../public/1540-ksss-001.jpg";
+import kssFlag from "../../public/images/1540-ksss-001.jpg";
 import "./AboutUs.css"
 
 
