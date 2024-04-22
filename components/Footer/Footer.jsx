@@ -34,7 +34,7 @@ const Footer = () => {
           <div className='sponsors flex flex-row gap-8 mt-7'>
             <Image src={coke} alt="Coke" width={70} height={60} />
             <Image src={hh} alt="HH" width={60} height={60} />
-            <Image src={stockholm} alt="Stockholm" width={100} height={60} />
+            <Image src={stockholm} alt="Stockholm" width={110} height={80} />
           </div>
         </div>
       </div>

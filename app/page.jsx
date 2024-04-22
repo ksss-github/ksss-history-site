@@ -1,5 +1,4 @@
 import { getTimeline } from "../sanity/sanity-utils"
-import Footer from "../components/Footer/Footer";
 
 export default async function Home() {
   const timeline = await getTimeline();
@@ -8,7 +7,7 @@ export default async function Home() {
 
   return (
     <div>
-     <Footer />
+      Landing page
     </div>
   );
 }
