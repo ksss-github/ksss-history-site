@@ -1,6 +1,7 @@
 import React from "react";
-import kssFlag from "../../public/images/1540-ksss-001.jpg";
+import historia from "../../public/images/1540-historia-001 2.png";
 import "./AboutUs.css"
+import Image from "next/image";
 
 
 const AboutUs = () => {
@@ -15,34 +16,20 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <section className="prose-sm mt-4 p-4 leading-6 tracking-tight sm:text-4xl">
+      <section className="section-about">
         <p>
-          KSSS (The Royal Yacht Club) is one of the oldest and largest yacht
-          clubs in the world. It was founded in 1830 and currently has close to
-          6,000 members, out of which about 2,500 are younger than 20 years old.
-          KSSS also has a very broad base of activities around the sport of
-          sailing; from youth camps, training classes, regattas (from smaller
-          local races to the world's largest international offshore race "Gotland
-          Runt"), to Olympic ambitions (e.g., 2 silver in Tokyo, 2021).
+        KSSS (Kungliga Svenska Segelsällskapet) är en av världens äldsta och största segelklubbar. Den grundades 1830 och har för närvarande nära 6 000 medlemmar, varav cirka 2 500 är yngre än 20 år. KSSS har också en mycket bred verksamhetsbas kring segelsporten; från ungdomsläger, träningskurser, regattor (från mindre lokala tävlingar till världens största internationella havskappsegling "Gotland Runt"), till olympiska ambitioner (till exempel 2 silver i Tokyo, 2021).
         </p> 
-        <img src={kssFlag} width={200} height={200} alt="KSSS Photo" />
       </section>
-
-      <section className="prose-sm p-4">
+ <Image src={historia} alt="KSSS historia" className="ksss-historia" />
+      <section className="section-about">
         <p>
-        We archive most of the material in a digital
-        archive on Google Drive where we organize
-        the collection according to a timeline from
-        the beginning of 1830. To be able to
-        distribute the work, it is divided into main
-        groups according to KSSS activities with a
-        person responsible for each main group.
-        This work will continue as long as the Club exists but of course very intensive right now as we have the first 200 years of history to collect and document.
+        Vi arkiverar det mesta av materialet i ett digitalt arkiv på Google Drive där vi organiserar samlingen enligt en tidslinje från början av 1830-talet. För att kunna fördela arbetet är det uppdelat i huvudgrupper enligt KSSS aktiviteter med en ansvarig person för varje huvudgrupp. Detta arbete kommer att fortsätta så länge klubben existerar, men naturligtvis mycket intensivt just nu då vi har de första 200 åren av historia att samla in och dokumentera.
         </p>
       </section>
 
-      <section className="prose-sm mt-2 p-4">
-      KSSS has since 2.5 years back formed a Historical Committee(HC) with the task of mapping what we have, for example, books, photos, films, prizes, trophies, models, etc. That work has begun and we are creating routines for how the entire process of collection and archiving should be done.
+      <section className="section-about">
+      KSSS har sedan 2,5 år tillbaka bildat en Historisk Kommitté (HK) med uppgiften att kartlägga det vi har, till exempel böcker, foton, filmer, priser, troféer, modeller, osv. Arbetet har påbörjats och vi skapar rutiner för hur hela processen med insamling och arkivering ska utföras.
       </section>
 
      
