@@ -1,4 +1,4 @@
-import AboutUs from "../aboutUs/AboutUs";
+import AboutUs from "../about-us/AboutUs";
 import Timeline from "../../components/Timeline";
 import { getTimeline } from "../../sanity/sanity-utils";
 export const dynamic = 'force-dynamic'
