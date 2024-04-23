@@ -1,21 +1,30 @@
 
 import rectangle from "../../public/images/Rectangle 71.png"
 import Image from "next/image";
-import group from "../../public/images/Group 29.png"
 import BtnLight from "../../components/button/BtnLight";
-import BtnDark from "../../components/button/BtnDark";
+import "./landingPage.css"
+
 
 
 export default async function LandingPage() {
   
-
   return (
     <div>
-      <section><Image src={rectangle} alt="KSSS historia" className="ksss-historia" />
-      <section className="section-about"></section>
-      <div>
-        <h3>Från startskott till idag</h3>
-        <p>Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>
+
+      <section className="achievement">
+        <div><p className="achievement-number">200+</p>
+        <p className="achievement-text">år av historia</p></div>
+        <div><p className="achievement-number">60+</p>
+        <p className="achievement-text">årsbocker</p></div>
+        <div><p className="achievement-number">50+</p>
+        <p className="achievement-text"> medaljer</p></div>
+      </section>
+      
+      <section>    
+        <Image src={rectangle} alt="KSSS historia" className="ksss-historia" />
+        <div className="updates">
+        <h2 className="updates-header">Från startskott till idag</h2>
+        <p className="updates-text">Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>
       </div>
 </section>
 
@@ -24,15 +33,11 @@ Detta hände denna dagen
 </section>
 
 
-<section style={{ position: "relative" }}> 
-        <div style={{ position: "relative", display: "inline-block" }}> 
-          <Image src={group} alt="KSSS historia" className="ksss-historia" />
-          <BtnLight style={{ position: "absolute", bottom: "10px", right: "10px" }}>OM OSS</BtnLight> 
-          <BtnDark>DARK</BtnDark>
-          
-        </div>
-      </section>
-
+<section className="omoss-box">
+  <h6 className="omoss-header">träffa historiska kommitteen</h6>
+  <p className="omoss-text">Träffa personerna som arbetar på att bevara KSSS historia</p>
+  <BtnLight>OM OSS</BtnLight>
+</section>
       
 
     </div>
