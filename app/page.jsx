@@ -1,13 +1,12 @@
 import { getTimeline } from "../sanity/sanity-utils"
+import LandingPage from "./landing-page/landingPage";
 
 export default async function Home() {
   const timeline = await getTimeline();
 
-  console.log(timeline);
-
   return (
     <div>
-      Landing page
+      <LandingPage />
     </div>
   );
 }

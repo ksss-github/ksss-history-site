@@ -32,6 +32,13 @@ const AboutUs = () => {
       KSSS har sedan 2,5 år tillbaka bildat en Historisk Kommitté (HK) med uppgiften att kartlägga det vi har, till exempel böcker, foton, filmer, priser, troféer, modeller, osv. Arbetet har påbörjats och vi skapar rutiner för hur hela processen med insamling och arkivering ska utföras.
       </section>
 
+      <section className="kommitte-box">
+      <h4>VÅR KOMMITTÉ</h4>
+      <div>
+        
+      </div>
+      </section>
+
      
 
       

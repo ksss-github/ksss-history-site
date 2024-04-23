@@ -1,0 +1,26 @@
+/* BtnLight.css */
+
+.btn-Light {
+  background-color: var(--lightblue);
+  color: var(--offwhite);
+  padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  font-size: small;
+  width: auto;
+}
+
+.btn:hover {
+  background-color: #add8e6;
+  border-color: #add8e6;
+}
+
+.btn-Dark {
+  background-color: var(--mainblue);
+  color: var(--offwhite);
+  padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  font-size: small;
+  width: auto;
+}
