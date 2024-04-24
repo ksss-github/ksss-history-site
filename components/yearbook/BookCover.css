@@ -1,0 +1,26 @@
+.bookcover__book-cover {
+  width: 90px;
+  height: 110px;
+  border: 0.5px solid black;
+  background-color: #0479ae;
+  border-radius: 2px;
+  padding: 3px;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.408);
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  cursor: pointer;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.bookcover__book-title {
+  /* transform: rotate(90deg); */
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.bookcover__under-text {
+  margin: 5px 1px;
+  font-size: 0.7rem;
+}
