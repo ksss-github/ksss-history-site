@@ -1,32 +1,27 @@
-.footer-container {
+.footer__container {
   background-color: var(--offwhite);
   padding: 2rem;
   font-family: Montserrat;
 }
 
-.kontak-text {
+.kontakt__text {
   margin-left: 0.7rem;
   font-size: medium;
 }
 
-.email-info,
-.number-info {
+.email__info,
+.numberinfo {
   display: flex;
   flex-direction: row;
   font-weight: 200;
 }
 
-.text-sm {
-  margin-top: 1rem;
-  margin-left: 0.7rem;
-}
-
-h4 {
+.footer__h4 {
   font-weight: 900;
   font-size: medium;
 }
 
-.website-container {
+.website__container {
   margin-top: 1.2rem;
   line-height: 1rem;
   margin-left: 0.7rem;
@@ -41,4 +36,12 @@ li {
   text-decoration: underline;
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.footer__telefon {
+  font-weight: 700;
+}
+
+.footer__telefon__nummer {
+  font-weight: 400;
 }
