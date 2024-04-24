@@ -1,4 +1,4 @@
-.modal-overlay {
+.modalpdf__modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   backdrop-filter: blur(5px);
 }
 
-.modal-content {
+.modalpdf__modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@
   max-height: 100%;
 }
 
-.close-button {
+.modalpdf__close-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -33,11 +33,11 @@
   cursor: pointer;
 }
 
-.navigation {
+.modalpdf__navigation {
   margin-top: 20px;
 }
 
-.navigation-button {
+.modalpdf__navigation-button {
   margin-right: 10px;
   border: solid black 1px;
   border-radius: 50%;
@@ -48,7 +48,7 @@
   cursor: pointer;
 }
 
-.number {
+.modalpdf__number {
   margin: 0 10px;
   background-color: aliceblue;
   border-radius: 3px;
@@ -56,7 +56,7 @@
   border: solid black 1px;
 }
 
-.download {
+.modalpdf__download {
   background-color: aliceblue;
   border-radius: 3px;
   padding: 2px 5px;
@@ -71,7 +71,7 @@
   flex: 1 0;
 }
 
-.pdf-box {
+.modalpdf__pdf-box {
   height: 80vh !important;
   overflow: hidden;
 }
@@ -80,7 +80,7 @@
   .react-pdf__Page__canvas {
     height: 63vh !important; /*38 for landscape */
   }
-  .pdf-box {
+  .modalpdf__pdf-box {
     height: 63vh !important;
   }
 }
@@ -89,7 +89,7 @@
   .react-pdf__Page__canvas {
     height: 64vh !important; /*38 for landscape */
   }
-  .pdf-box {
+  .modalpdf__pdf-box {
     height: 64vh !important;
   }
 }
@@ -98,7 +98,7 @@
   .react-pdf__Page__canvas {
     height: 64vh !important; /*38 for landscape */
   }
-  .pdf-box {
+  .modalpdf__pdf-box {
     height: 64vh !important;
   }
 }
@@ -106,7 +106,7 @@
   .react-pdf__Page__canvas {
     height: 54vh !important; /*38 for landscape */
   }
-  .pdf-box {
+  .modalpdf__pdf-box {
     height: 54vh !important;
   }
 }
@@ -115,15 +115,7 @@
   .react-pdf__Page__canvas {
     height: 46vh !important; /*38 for landscape */
   }
-  .pdf-box {
+  .modalpdf__pdf-box {
     height: 46vh !important;
   }
-}
-
-.number,
-.download {
-  background-color: aliceblue;
-  border-radius: 3px;
-  padding: 2px 5px;
-  border: solid black 1px;
 }

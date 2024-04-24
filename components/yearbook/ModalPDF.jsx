@@ -12,38 +12,38 @@ function ModalPDF({
   goToNextPage,
 }) {
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <button className="close-button" onClick={onCloseModal}>
+    <div className="modalpdf__modal-overlay">
+      <div className="modalpdf__modal-content">
+        <button className="modalpdf__close-button" onClick={onCloseModal}>
           Close
         </button>
         <Document
-          className="pdf-box"
+          className="modalpdf__pdf-box"
           file={pdf}
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <Page pageNumber={pageNumber} renderTextLayer={false} />
         </Document>
-        <div className="navigation">
+        <div className="modalpdf__navigation">
           <button
-            className="navigation-button"
+            className="modalpdf__navigation-button"
             onClick={goToPreviousPage}
             disabled={pageNumber <= 1}
           >
             &lt;
           </button>
-          <span className="number">
+          <span className="modalpdf__number">
             Page {pageNumber} of {numPages}
           </span>
           <button
-            className="navigation-button"
+            className="modalpdf__navigation-button"
             onClick={goToNextPage}
             disabled={pageNumber >= numPages}
           >
             &gt;
           </button>
         </div>
-        <a className="download" href={pdf} download>
+        <a className="modalpdf__download" href={pdf} download>
           Download PDF
         </a>
       </div>
