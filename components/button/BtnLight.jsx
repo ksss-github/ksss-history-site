@@ -7,7 +7,7 @@ const BtnLight = ({ onClick, disabled, children, className }) => {
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`btn-Light ${className}`}
+      className={`btn__Light ${className}`}
     >
       {children}
     </button>

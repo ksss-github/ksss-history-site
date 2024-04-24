@@ -7,7 +7,7 @@ const BtnDark = ({ onClick, disabled, children, className }) => {
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`btn-Dark ${className}`} 
+      className={`btn__Dark ${className}`} 
     >
       {children}
     </button>

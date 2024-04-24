@@ -10,14 +10,14 @@
 }
 
 .email__info,
-.numberinfo {
+.number__info {
   display: flex;
   flex-direction: row;
   font-weight: 200;
 }
 
 .footer__h4 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: medium;
 }
 
@@ -39,9 +39,13 @@ li {
 }
 
 .footer__telefon {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .footer__telefon__nummer {
   font-weight: 400;
+}
+
+.email_text {
+  font-weight: 500;
 }

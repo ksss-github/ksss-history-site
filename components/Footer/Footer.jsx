@@ -6,9 +6,9 @@ const Footer = () => {
     <div>
       <div className='footer__container'>
         <div className='kontak__container'>
-          <h4 className='kontak__text'>KONTAKT</h4>
+          <h4 className='kontak__h4'>KONTAKT</h4>
           <div className='email__info'>
-            <p className='email'>EMAIL</p> 
+            <p className='email_text'>EMAIL</p> 
             <p className='email_address'>kssshistory@ksss.se</p>
           </div>
           <div className='number__info'>
@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='website__container'>
-          <h4>WEBSITE</h4>
+          <h4 className='footer__h4'>WEBSITE</h4>
           <ul>
             <li>Om oss</li>
             <li>www.ksss.se</li>
