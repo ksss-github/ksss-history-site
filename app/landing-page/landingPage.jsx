@@ -28,8 +28,13 @@ export default async function LandingPage() {
       </div>
 </section>
 
-<section>
-Detta hände denna dagen
+<section className="event-section">
+  <h3 className="event-header">Milstolpar i vår historia</h3>
+  <div className="event-card">
+    <h3>1905</h3> 
+<p>Svenska Seglarförbundet bildas </p>
+  </div>
+
 </section>
 
 

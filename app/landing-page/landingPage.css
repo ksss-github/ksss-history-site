@@ -32,13 +32,31 @@
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.2rem;
-  font-family: baskervville;
   text-align: center;
+  font-family: Montserrat;
 }
 .updates-text {
   font-weight: 300;
   text-align: center;
   font-size: medium;
+  font-family: baskervville;
+}
+
+.event-section {
+  background-color: var(--mainblue);
+  color: var(--offwhite);
+}
+
+.event-card {
+  width: 25rem;
+  height: 10rem;
+  background-image: url(../../public/images/RB.jpg);
+  background-size: 40%;
+}
+
+.event-header {
+  font-size: larger;
+  color: var(--offwhite);
 }
 
 .omoss-box {

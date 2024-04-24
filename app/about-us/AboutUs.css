@@ -19,6 +19,7 @@
   font-size: 1.25rem;
   text-align: center;
   text-transform: uppercase;
+  font-family: Montserrat;
 }
 
 .box-text {
@@ -27,6 +28,7 @@
   line-height: 1.25rem;
   padding-left: 0.3rem;
   padding-right: 1rem;
+  font-family: Baskervville;
 }
 
 .section-about {

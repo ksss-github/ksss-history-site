@@ -1,13 +1,12 @@
 .footer-container {
   background-color: var(--offwhite);
   padding: 2rem;
-}
-
-.kontak-container {
+  font-family: Montserrat;
 }
 
 .kontak-text {
   margin-left: 0.7rem;
+  font-size: medium;
 }
 
 .email-info,
@@ -23,8 +22,8 @@
 }
 
 h4 {
-  font-weight: 600;
-  font-size: larger;
+  font-weight: 900;
+  font-size: medium;
 }
 
 .website-container {
