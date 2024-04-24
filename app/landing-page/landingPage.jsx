@@ -36,8 +36,8 @@ export default async function LandingPage() {
       <section>    
         <Image src={rectangle} alt="KSSS historia" className="ksss__historia" />
         <div className="updates">
-        <h2 className="updates__header">Från startskott till idag</h2>
-        <p className="updates__text">Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>
+        <h2 className="updates__h2">Från startskott till idag</h2>
+        <p className="updates__p">Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>
       </div>
 </section>
 
@@ -47,8 +47,8 @@ export default async function LandingPage() {
       </section>
       
       <section className="omoss__box">
-        <h6 className="omoss__header">träffa historiska kommitteen</h6>
-        <p className="omoss__text">Träffa personerna som arbetar på att bevara KSSS historia</p>
+        <h6 className="omoss__h6">träffa historiska kommitteen</h6>
+        <p className="omoss__p">Träffa personerna som arbetar på att bevara KSSS historia</p>
         <BtnLight>OM OSS</BtnLight>
       </section>
     </div>
