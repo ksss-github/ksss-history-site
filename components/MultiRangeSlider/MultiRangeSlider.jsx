@@ -51,7 +51,7 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
   }, [min, max]);
 
   return (
-    <div className="container">
+    <div className="slider-container">
   <div className="val-text">{minVal}</div>
   <div>
     <input
