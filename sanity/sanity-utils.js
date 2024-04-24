@@ -13,12 +13,10 @@ export async function getTimeline(){
         _createdAt,
         title,
         "tagIds": tags[]->value.current,
-        "tags": tags[]->{ 
-          "id": value.current
-      },
         "slug": slug.current,
         date,
         location,
+        description,
         "image": {
     "url": image.asset->url,
     "alt": image.alt

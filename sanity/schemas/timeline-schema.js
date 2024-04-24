@@ -10,26 +10,6 @@ const timeline = {
       validation: (Rule) => Rule.required(),
       description: "Title of the event."
     },
-    // {
-    //   name: "tags",
-    //   title: "Tags",
-    //   description: "Tags for categorizing the event and filter. At least one tag is required.",
-    //   validation: (Rule) => Rule.required(),
-    //   type: "array",
-    //   of: [
-    //     {
-    //       type: "string",
-    //     },
-    //   ],
-    //   options: {
-    //     list: [
-    //       { title: "Main timeline", value: "main-timeline" },
-    //       { title: "Gotland Runt", value: "gotland-runt" },
-    //       { title: "Racing", value: "racing" },
-    //     ],
-    //     layout: "grid",
-    //   },
-    // },
     {
       title: "Tags",
       name: "tags",
@@ -75,20 +55,6 @@ const timeline = {
       description: "Content of the event."
     },
     {
-      name: "image",
-      title: "Timeline Preview Image",
-      type: "image",
-      description: "Upload preview image for the timeline block.",
-      options: { hotspot: true }, 
-      fields: [
-        {
-          name: "alt",
-          title: "Alt",
-          type: "string"
-        }
-      ]
-    },
-    {
       name: 'gallery',
       type: 'array',
       of: [
@@ -103,7 +69,7 @@ const timeline = {
       options: {
         layout: 'grid'
       },
-      description: "Upload or drag and drop images here."
+      description: "Upload or drag and drop images here. These images will be shown in the event's full page."
     },
     {
       title: "Related Links",
@@ -115,6 +81,27 @@ const timeline = {
         }
       ],
       description: "Add links related to the event."
+    },
+    {
+      name: "image",
+      title: "Timeline Preview Image",
+      type: "image",
+      description: "Upload preview image for the timeline block.",
+      options: { hotspot: true }, 
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string"
+        }
+      ]
+    },
+    {
+      title: "Timeline Preview Description",
+      name: "description",
+      type: "string",
+      validation: (Rule) => Rule.required().max(200).warning("Description should be brief and not exceed 200 characters."),
+      description: "Brief description of the event for the preview in the timeline. Max 200 characters."
     }
   ]
 }
