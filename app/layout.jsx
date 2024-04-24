@@ -25,9 +25,6 @@ export default function RootLayout({
           <Link href="/about-us"> About Us</Link>
           </nav>
         </header>
-
-        
-        
         <main>
         {children}
         </main>

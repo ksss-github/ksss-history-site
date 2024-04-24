@@ -29,14 +29,7 @@ const Footer = () => {
             <li>GDPR</li>
           </ul>
         </div>
-        <div className='huvudpartners flex flex-col items-center justify-center'>
-          <h4>Våra Huvudpartners</h4>
-          <div className='sponsors flex flex-row gap-8 mt-7'>
-            <Image src={coke} alt="Coke" width={70} height={60} />
-            <Image src={hh} alt="HH" width={60} height={60} />
-            <Image src={stockholm} alt="Stockholm" width={110} height={80} />
-          </div>
-        </div>
+       
       </div>
     </div>
   );
