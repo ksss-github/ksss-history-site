@@ -1,0 +1,129 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.634);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  z-index: 900;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.navigation-button {
+  margin-right: 10px;
+  border: solid black 1px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+}
+
+.number {
+  margin: 0 10px;
+  background-color: aliceblue;
+  border-radius: 3px;
+  padding: 2px 5px;
+  border: solid black 1px;
+}
+
+.download {
+  background-color: aliceblue;
+  border-radius: 3px;
+  padding: 2px 5px;
+  border: solid black 1px;
+}
+
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  width: auto !important;
+  height: 80vh !important; /*look at size 66vh mobil*/
+  border: solid rgba(0, 0, 0, 0.619) 1px;
+  flex: 1 0;
+}
+
+.pdf-box {
+  height: 80vh !important;
+  overflow: hidden;
+}
+
+@media (max-width: 770px) {
+  .react-pdf__Page__canvas {
+    height: 63vh !important; /*38 for landscape */
+  }
+  .pdf-box {
+    height: 63vh !important;
+  }
+}
+
+@media (max-width: 821px) {
+  .react-pdf__Page__canvas {
+    height: 64vh !important; /*38 for landscape */
+  }
+  .pdf-box {
+    height: 64vh !important;
+  }
+}
+
+@media (max-width: 670px) {
+  .react-pdf__Page__canvas {
+    height: 64vh !important; /*38 for landscape */
+  }
+  .pdf-box {
+    height: 64vh !important;
+  }
+}
+@media (max-width: 500px) {
+  .react-pdf__Page__canvas {
+    height: 54vh !important; /*38 for landscape */
+  }
+  .pdf-box {
+    height: 54vh !important;
+  }
+}
+
+@media (max-width: 391px) {
+  .react-pdf__Page__canvas {
+    height: 46vh !important; /*38 for landscape */
+  }
+  .pdf-box {
+    height: 46vh !important;
+  }
+}
+
+.number,
+.download {
+  background-color: aliceblue;
+  border-radius: 3px;
+  padding: 2px 5px;
+  border: solid black 1px;
+}
