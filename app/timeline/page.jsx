@@ -1,7 +1,7 @@
 import Timeline from "../../components/Timeline/Timeline";
 import { getTimeline } from "../../sanity/sanity-utils";
-export const dynamic = 'force-dynamic'
-export const fetchCache = 'force-no-store';
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 
 export default async function TimelinePage() {
@@ -15,4 +15,3 @@ export default async function TimelinePage() {
   
   );
 }
-

@@ -2,8 +2,7 @@ import { getFullEvent } from "../../../sanity/sanity-utils";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import React from "react";
-export const fetchCache = 'force-no-store';
-
+export const fetchCache = "force-no-store";
 
 export default async function currentEvent({ params }) {
   const slug = params.selectedEvent;
@@ -16,16 +15,22 @@ export default async function currentEvent({ params }) {
         <p>{currentEvent.date}</p>
         <p>{currentEvent.location}</p>
       </section>
-        
-        <section className="p-4">
-          <PortableText value={currentEvent.content} />
-        </section>
+
+      <section className="p-4">
+        <PortableText value={currentEvent.content} />
+      </section>
 
       <div className="grid grid-cols-3">
         {currentEvent.gallery &&
           currentEvent.gallery.map((item) => {
             return (
-              <Image key={crypto.randomUUID()} src={item.url} alt={item.alt || "image"} width={200} height={200} />
+              <Image
+                key={crypto.randomUUID()}
+                src={item.url}
+                alt={item.alt || "image"}
+                width={200}
+                height={200}
+              />
             );
           })}
       </div>
@@ -33,15 +38,12 @@ export default async function currentEvent({ params }) {
       <section className="flex flex-col gap-4">
         <h2>Related links</h2>
         <div>
-
-        {currentEvent.relatedLinks &&
-          currentEvent.relatedLinks.map((link) => {
-            return <div key={crypto.randomUUID()}>{link}</div>;
-          })}
-          </div>
+          {currentEvent.relatedLinks &&
+            currentEvent.relatedLinks.map((link) => {
+              return <div key={crypto.randomUUID()}>{link}</div>;
+            })}
+        </div>
       </section>
     </article>
   );
 }
-
-
