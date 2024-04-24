@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import Link from "next/link";
 import Header from "../components/Header.jsx";
 import Carousel from "../components/Carousel.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <header className="flex justify-between p-4 bg-[#e2f7ff]">
           <span className="font-bold">KSSS</span>
           <nav className="flex gap-4 font-semibold">
