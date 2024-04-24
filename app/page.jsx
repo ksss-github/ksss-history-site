@@ -1,13 +1,10 @@
-import { getTimeline } from "../sanity/sanity-utils"
+"use client";
+import { getTimeline } from "../sanity/sanity-utils";
 
 export default async function Home() {
   const timeline = await getTimeline();
 
   console.log(timeline);
 
-  return (
-    <div>
-      Landing page
-    </div>
-  );
+  return <div></div>;
 }

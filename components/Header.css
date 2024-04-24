@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/* Styles for larger screens */
+.header {
+  width: 100%;
+  height: 120px;
+  background-color: #edebe7;
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  list-style: none;
+  color: #162743;
+  display: inline-block;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: larger;
+  padding-bottom: 22px;
+}
+
+.navbar-links a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+  transition: color 0.3s;
+}
+.navbar-links a:hover {
+  color: red; /* Change font color on hover */
+}
+
+.navbar-links a.active {
+  color: red; /* Change font color when active */
+}
+
+/* Add background frame for active link */
+.navbar-links a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: navy !important;
+  position: absolute;
+  bottom: -2px; /* Adjust position to frame the link */
+}
+
+.ksss-logo {
+  padding-left: 4vh;
+  width: auto;
+}
+
+.swedish-flag {
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 30px;
+  width: auto;
+  height: auto;
+}
+.search-icon {
+  margin-left: 0px;
+}
+.menu-toggle {
+  display: block;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .ksss-logo {
+    padding-left: 0.5vh;
+    width: auto;
+  }
+
+  .swedish-flag {
+    padding-left: 25px;
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle for smaller screens */
+    cursor: pointer;
+    color: #162743;
+    width: 40px;
+    height: 40px;
+    padding-right: 5vh;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    padding: 1rem;
+    z-index: 100; /* Ensure it's above other content */
+    overflow-y: auto;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu ul,
+  .menu ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .menu ul li a {
+    padding-top: 5vh;
+    color: #162743;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  /* Show the menu links */
+  .menu-links {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    /* Add more styles as needed */
+  }
+}
+/* Styles for larger screens */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Hide menu toggle for larger screens */
+  }
+}
