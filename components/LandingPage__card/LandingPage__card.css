@@ -1,0 +1,68 @@
+.event__container {
+  overflow-y: hidden;
+}
+
+.event__card__container {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  align-items: flex-end;
+}
+
+.event__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  padding-top: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  min-width: 14rem;
+  height: 18rem;
+}
+
+.event__card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event__card.background-1 {
+  background-image: url("../../public/images/Fidra1.png");
+  background-size: cover;
+}
+
+.event__card.background-2 {
+  background-image: url("/images/image8.png");
+  background-size: cover;
+}
+
+.event__card.background-3 {
+  background-image: url("/images/Kvinliga.jpg");
+  background-size: cover;
+}
+
+.event__content {
+  width: 100%;
+}
+
+.event__year {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--offwhite);
+}
+
+.event__description {
+  font-size: 1rem;
+  color: var(--offwhite);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.event__h3 {
+  font-size: larger;
+  font-weight: 600;
+  padding-top: 1rem;
+  padding-left: 1.4rem;
+}

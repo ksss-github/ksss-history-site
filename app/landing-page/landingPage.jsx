@@ -1,16 +1,29 @@
-
-import rectangle from "../../public/images/Rectangle 71.png"
+import React from 'react';
 import Image from "next/image";
 import BtnLight from "../../components/button/BtnLight";
-import "./landingPage.css"
-
-
+import "./landingPage.css";
+import LandingPage__card from "../../components/LandingPage__card/LandingPage__card";
+import rectangle from "../../public/images/Rectangle 71.png";
 
 export default async function LandingPage() {
-  
+ 
+  const events = [
+    {
+      Year: "1905",
+      description: "Svenska Seglarförbundet bildas"
+    },
+    {
+      Year: "2007",
+      description: "175-års jubileum"
+    },
+    {
+      Year: "1897",
+      description: "Kvinnor får gå med i KSSS"
+    }
+  ];
+
   return (
     <div>
-
       <section className="achievement">
         <div><p className="achievement__number">200+</p>
         <p className="achievement__text">år av historia</p></div>
@@ -28,23 +41,16 @@ export default async function LandingPage() {
       </div>
 </section>
 
-<section className="event__section">
-  <h3 className="event__header">Milstolpar i vår historia</h3>
-  <div className="event__card">
-    <h3>1905</h3> 
-<p>Svenska Seglarförbundet bildas </p>
-  </div>
-
-</section>
-
-
-<section className="omoss__box">
-  <h6 className="omoss__header">träffa historiska kommitteen</h6>
-  <p className="omoss__text">Träffa personerna som arbetar på att bevara KSSS historia</p>
-  <BtnLight>OM OSS</BtnLight>
-</section>
+     <section>
+      <div>
+        <LandingPage__card events={events} /></div>
+      </section>
       
-
+      <section className="omoss__box">
+        <h6 className="omoss__header">träffa historiska kommitteen</h6>
+        <p className="omoss__text">Träffa personerna som arbetar på att bevara KSSS historia</p>
+        <BtnLight>OM OSS</BtnLight>
+      </section>
     </div>
   );
 }

@@ -48,10 +48,7 @@
 }
 
 .event__card {
-  width: 25rem;
-  height: 10rem;
-  background-image: url(../../public/images/RB.jpg);
-  background-size: 40%;
+  width: auto;
 }
 
 .event__header {
