@@ -21,7 +21,7 @@ export default async function LandingPage() {
       </section>
       
       <section>    
-        <Image src={rectangle} alt="KSSS historia" className="ksss-historia" />
+        <Image src={rectangle} alt="KSSS historia" className="ksss__historia" />
         <div className="updates">
         <h2 className="updates__header">Från startskott till idag</h2>
         <p className="updates__text">Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>

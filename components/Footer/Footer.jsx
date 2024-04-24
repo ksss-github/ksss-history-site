@@ -8,8 +8,8 @@ const Footer = () => {
         <div className='kontak__container'>
           <h4 className='kontak__text'>KONTAKT</h4>
           <div className='email__info'>
-            <p className='text-sm font-semibold'>EMAIL</p> 
-            <p className='text-sm underline'>kssshistory@ksss.se</p>
+            <p className='email'>EMAIL</p> 
+            <p className='email_address'>kssshistory@ksss.se</p>
           </div>
           <div className='number__info'>
             <p className='footer__telefon'>TELEFON</p> 
