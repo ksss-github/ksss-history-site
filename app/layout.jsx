@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           <nav className="flex gap-4 font-semibold">
           <Link href="/"> HOME </Link>
           <Link href="/timeline"> TIMELINE </Link>
-          <Link href="/"> YEAR BOOKS </Link>
+          <Link href="/yearbook"> YEAR BOOKS </Link>
           <Link href="/about-us"> About Us</Link>
           </nav>
         </header>
