@@ -24,20 +24,20 @@ export default async function LandingPage() {
 
   return (
     <div>
-      <section className="achievement">
-        <div><p className="achievement__number">200+</p>
-        <p className="achievement__text">år av historia</p></div>
-        <div><p className="achievement__number">60+</p>
-        <p className="achievement__text">årsbocker</p></div>
-        <div><p className="achievement__number">50+</p>
-        <p className="achievement__text"> medaljer</p></div>
+      <section className="landing__page">
+        <div><p className="landingpage__number">200+</p>
+        <p className="landingpage__p">år av historia</p></div>
+        <div><p className="landingpage__number">60+</p>
+        <p className="landingpage__p">årsbocker</p></div>
+        <div><p className="landingpage__number">50+</p>
+        <p className="landingpage__p"> medaljer</p></div>
       </section>
       
       <section>    
         <Image src={rectangle} alt="KSSS historia" className="ksss__historia" />
-        <div className="updates">
-        <h2 className="updates__h2">Från startskott till idag</h2>
-        <p className="updates__p">Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>
+        <div className="landingpage__updates">
+        <h2 className="ulandingpage__h2">Från startskott till idag</h2>
+        <p className="landingpage__p">Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>
       </div>
 </section>
 
@@ -46,9 +46,9 @@ export default async function LandingPage() {
         <LandingPage__card events={events} /></div>
       </section>
       
-      <section className="omoss__box">
-        <h6 className="omoss__h6">träffa historiska kommitteen</h6>
-        <p className="omoss__p">Träffa personerna som arbetar på att bevara KSSS historia</p>
+      <section className="landingpage__omoss">
+        <h6 className="landingpage__h6">träffa historiska kommitteen</h6>
+        <p className="landingpage__omoss__p">Träffa personerna som arbetar på att bevara KSSS historia</p>
         <BtnLight>OM OSS</BtnLight>
       </section>
     </div>

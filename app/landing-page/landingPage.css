@@ -1,4 +1,4 @@
-.achievement {
+.landing__page {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -8,13 +8,13 @@
   background-color: var(--offwhite);
 }
 
-.achievement__number {
+.landingpage__number {
   color: var(--red);
   font-weight: 650;
   font-size: small;
 }
 
-.achievement__text {
+.landingpage__p {
   text-transform: uppercase;
   font-size: x-small;
   font-weight: 600;
@@ -25,11 +25,11 @@
   width: 100%;
 }
 
-.updates {
+.landingpage__updates {
   padding: 2.5rem;
 }
 
-.updates__h2 {
+.ulandingpage__h2 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.2rem;
@@ -59,7 +59,7 @@
   color: var(--offwhite);
 }
 
-.omoss__box {
+.landingpage__omoss {
   background-image: url(../../public/images/group.png);
   background-size: cover;
   padding: 2rem;
@@ -70,14 +70,14 @@
   margin-bottom: 1rem;
 }
 
-.omoss__h6 {
+.landingpage__h6 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: medium;
   margin-top: 8rem;
 }
 
-.omoss__p {
+.landingpage__omoss__p {
   font-weight: 500;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
