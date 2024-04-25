@@ -33,16 +33,19 @@ export default async function LandingPage() {
         <p className="landingpage__p"> medaljer</p></div>
       </section>
       
-      <section>    
-        <Image src={rectangle} alt="KSSS historia" className="ksss__historia" />
+      <section className='landingpage__section'>   
+      <div className="landingpage__content">
+      <Image src={rectangle} alt="KSSS historia" className="landingpage__hero" />
+
         <div className="landingpage__updates">
         <h2 className="ulandingpage__h2">Från startskott till idag</h2>
         <p className="landingpage__p">Utforska KSSS historia, från dess grundande 1830, och upptäck en rik värld av seglingskultur och framstående prestationer. Det finns mycket att hitta!</p>
       </div>
+      </div> 
 </section>
 
-     <section>
-      <div>
+     <section className='landingpage__historia__container'>
+      <div className='landingpage__historia'>
         <LandingPage__card events={events} /></div>
       </section>
       

@@ -17,7 +17,6 @@
   justify-content: flex-end;
   padding: 1rem;
   padding-top: 0;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   min-width: 14rem;
@@ -65,4 +64,32 @@
   font-weight: 600;
   padding-top: 1rem;
   padding-left: 1.4rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .event__card {
+    min-width: 28%;
+    min-height: 24rem;
+    row-gap: 5rem;
+  }
+
+  .event__card.background-1 {
+    background-size: cover;
+  }
+
+  .event__card.background-2 {
+    background-size: cover;
+  }
+
+  .event__card.background-3 {
+    background-size: cover;
+  }
+
+  .event__card__container {
+    justify-content: center;
+  }
+
+  .event__h3 {
+    margin-left: 5rem;
+  }
 }

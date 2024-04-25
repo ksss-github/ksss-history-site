@@ -19,10 +19,12 @@
   font-size: x-small;
   font-weight: 600;
   color: var(--mainblue);
+  text-align: center;
 }
 
-.ksss__historia {
+.landingpage__hero {
   width: 100%;
+  height: auto;
 }
 
 .landingpage__updates {
@@ -82,4 +84,44 @@
   margin-top: 0.2rem;
   margin-bottom: 1rem;
   font-size: small;
+}
+
+@media only screen and (min-width: 768px) {
+  img.landingpage__hero {
+    width: 80%; /* Adjust as needed */
+    height: auto;
+    margin: auto;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .landingpage__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landingpage__content {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .landingpage__updates {
+    padding: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .landingpage__omoss {
+    width: 89rem;
+    height: 25rem;
+    justify-content: center;
+    margin-left: 9rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    margin-top: 1rem;
+    background-position: center;
+  }
 }
