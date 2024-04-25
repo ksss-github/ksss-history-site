@@ -3,7 +3,7 @@ import Image from "next/image";
 import BtnLight from "../../components/button/BtnLight";
 import "./landingPage.css";
 import LandingPage__card from "../../components/LandingPage__card/LandingPage__card";
-import rectangle from "../../public/images/Rectangle 71.png";
+import afore2013 from "../../public/images/afore2013.jpg";
 
 export default async function LandingPage() {
  
@@ -35,7 +35,7 @@ export default async function LandingPage() {
       
       <section className='landingpage__section'>   
       <div className="landingpage__content">
-      <Image src={rectangle} alt="KSSS historia" className="landingpage__hero" />
+      <Image src={afore2013} alt="KSSS historia" className="landingpage__hero" />
 
         <div className="landingpage__updates">
         <h2 className="ulandingpage__h2">Från startskott till idag</h2>

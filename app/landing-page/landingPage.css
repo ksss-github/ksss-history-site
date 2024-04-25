@@ -28,7 +28,7 @@
 }
 
 .landingpage__updates {
-  padding: 2.5rem;
+  padding: 3rem;
 }
 
 .ulandingpage__h2 {
@@ -88,10 +88,12 @@
 
 @media only screen and (min-width: 768px) {
   img.landingpage__hero {
-    width: 95%;
+    width: 100%;
     height: auto;
     margin: auto;
-    padding: 1rem;
+  }
+
+  .landingpage__updates {
   }
 }
 
@@ -101,6 +103,16 @@
     flex-direction: column;
   }
 
+  img.landingpage__hero {
+    width: 40%;
+    height: auto;
+    margin: auto;
+  }
+
+  .landingpage__content {
+    padding: 4rem;
+  }
+
   .landingpage__content {
     display: flex;
     flex-direction: row;
@@ -108,7 +120,7 @@
   }
 
   .landingpage__updates {
-    padding: 2rem;
+    padding: 7rem;
     margin-top: 5rem;
     margin-bottom: 3rem;
   }
