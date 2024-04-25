@@ -86,7 +86,7 @@ const Header = () => {
                 activeLink === "about" ? "active" : ""
               }`}
             >
-              <Link href="/" onClick={() => handleLinkClick("about")}>
+              <Link href="/about-us" onClick={() => handleLinkClick("about")}>
                 OM KSSS
               </Link>
             </li>
