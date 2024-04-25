@@ -1,4 +1,5 @@
 import { getTimeline } from "../sanity/sanity-utils"
+import AboutUs from "./about-us/AboutUs";
 import LandingPage from "./landing-page/landingPage";
 
 export default async function Home() {
@@ -6,7 +7,7 @@ export default async function Home() {
 
   return (
     <div>
-      <LandingPage />
+      <AboutUs />
     </div>
   );
 }

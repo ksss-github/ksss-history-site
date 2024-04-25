@@ -1,4 +1,6 @@
-.header__box {
+/* AboutUs.css */
+
+.aboutus__header__box {
   box-shadow: 4px 0px 8px -2px rgba(0, 0, 0, 0.65);
   -webkit-box-shadow: 4px 0px 8px -2px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 4px 0px 8px -2px rgba(0, 0, 0, 0.65);
@@ -6,24 +8,23 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color: var(--mainblue) !important;
+  background-color: var(--mainblue);
   align-self: center;
-  padding-top: 1.7rem;
-  padding-bottom: 1.7rem;
+  padding: 2rem;
   color: var(--offwhite);
 }
 
-.box__header__text {
-  font-weight: 800;
-  margin-bottom: 0.8rem;
-  font-size: 1.25rem;
+.aboutus__h1 {
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
   font-family: Montserrat;
 }
 
-.box__text {
-  font-size: 0.85rem;
+.aboutus__p {
+  font-size: 1rem;
   text-align: center;
   line-height: 1.25rem;
   padding-left: 0.3rem;
@@ -31,10 +32,15 @@
   font-family: Baskervville;
 }
 
-.section__about {
-  padding: 0.7rem;
+.aboutus__section__p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.aboutus__section {
+  padding: 1.9rem;
   letter-spacing: -0.01em;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: left;
   font-weight: 300;
 }
@@ -45,13 +51,33 @@
   margin-right: auto;
   width: 93%;
 }
+
 .kommitte__box {
   background-color: var(--mainblue);
   color: var(--offwhite);
   border-top: 0.3rem solid var(--gold);
   border-bottom: 0.3rem solid var(--gold);
+  padding: 1rem;
 }
 
 .aboutus__h4 {
   font-weight: 600;
+  font-size: larger;
+}
+
+.committee__profile__container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-top: 1rem;
+}
+
+.committee__profile__container::-webkit-scrollbar {
+  display: none;
+}
+
+.committee__profile__container > * {
+  margin-right: 10px;
 }
