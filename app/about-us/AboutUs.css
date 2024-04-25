@@ -81,3 +81,52 @@
 .committee__profile__container > * {
   margin-right: 10px;
 }
+
+@media only screen and (min-width: 1200px) {
+  .aboutus__header__box {
+    height: 15rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .aboutus__p {
+    font-size: large;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .aboutus__section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0;
+  }
+
+  .aboutus__section__p {
+    padding: 0;
+  }
+
+  .ksss__historia {
+    width: 60%;
+  }
+
+  .committee__profile__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center horizontally */
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    min-width: 15rem;
+  }
+
+  .committee__profile__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .committee__profile__container > * {
+    text-align: center;
+  }
+  .aboutus__h4 {
+    margin-left: 3rem;
+  }
+}
