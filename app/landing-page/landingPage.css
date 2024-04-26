@@ -64,19 +64,23 @@
 .landingpage__omoss {
   background-image: url(../../public/images/group.png);
   background-size: cover;
+  background-position: center;
   padding: 2rem;
   color: var(--offwhite);
   text-align: center;
   font-size: 1.2rem;
   font-family: Baskervville;
   margin-bottom: 1rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .landingpage__h6 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: medium;
-  margin-top: 8rem;
 }
 
 .landingpage__omoss__p {
@@ -120,17 +124,5 @@
     padding: 7rem;
     margin-top: 5rem;
     margin-bottom: 3rem;
-  }
-
-  .landingpage__omoss {
-    width: 102rem;
-    height: 25rem;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 5rem;
-    margin-left: 2rem;
-    margin-top: 1rem;
-    background-position: center;
   }
 }
