@@ -8,12 +8,6 @@
   background-color: var(--offwhite);
 }
 
-@media (max-width: 768px) {
-  .landing__page {
-    display: none;
-  }
-}
-
 .landingpage__number {
   color: var(--red);
   font-weight: 650;

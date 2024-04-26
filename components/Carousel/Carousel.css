@@ -5,10 +5,7 @@
   padding-top: 5px;
   width: 100vw; /* Set width to 100% of viewport width */
   height: 70vh; /* Set height to 70% of viewport height */
-  position: absolute;
-  top: 120px; /* Positioning 120px from the top of the screen */
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   overflow: hidden;
 }
 
