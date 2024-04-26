@@ -8,19 +8,19 @@
   background-color: var(--offwhite);
 }
 
-.achievement-number {
+.achievement__number {
   color: var(--red);
   font-weight: 650;
   font-size: smaller;
 }
 
-.achievement-text {
+.achievement__text {
   text-transform: uppercase;
   font-size: smaller;
   font-weight: 600;
 }
 
-.ksss-historia {
+.ksss__historia {
   width: 100%;
 }
 
@@ -28,38 +28,38 @@
   padding: 1.4rem;
 }
 
-.updates-header {
+.updates__header {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.2rem;
   text-align: center;
   font-family: Montserrat;
 }
-.updates-text {
+.updates__text {
   font-weight: 300;
   text-align: center;
   font-size: medium;
   font-family: baskervville;
 }
 
-.event-section {
+.event__section {
   background-color: var(--mainblue);
   color: var(--offwhite);
 }
 
-.event-card {
+.event__card {
   width: 25rem;
   height: 10rem;
   background-image: url(../../public/images/RB.jpg);
   background-size: 40%;
 }
 
-.event-header {
+.event__header {
   font-size: larger;
   color: var(--offwhite);
 }
 
-.omoss-box {
+.omoss__box {
   background-image: url(../../public/images/group.png);
   background-size: cover;
   padding: 2rem;
@@ -70,13 +70,13 @@
   margin-bottom: 1rem;
 }
 
-.omoss-header {
+.omoss__header {
   text-transform: uppercase;
   font-weight: 900;
   margin-top: 7rem;
 }
 
-.omoss-text {
+.omoss__text {
   font-weight: 500;
   margin-top: 0.2rem;
   margin-bottom: 1rem;

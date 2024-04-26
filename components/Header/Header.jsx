@@ -77,7 +77,7 @@ const Header = () => {
                 activeLink === "books" ? "active" : ""
               }`}
             >
-              <Link href="/" onClick={() => handleLinkClick("books")}>
+              <Link href="/yearbook" onClick={() => handleLinkClick("books")}>
                 ÅRSBOCKERNA
               </Link>
             </li>

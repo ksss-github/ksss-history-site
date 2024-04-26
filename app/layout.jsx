@@ -1,9 +1,8 @@
 "use client";
 import { Montserrat } from "next/font/google";
-import Link from "next/link";
 import Header from "../components/Header/Header.jsx";
-
 import Footer from "../components/Footer/Footer.jsx";
+import "./globals.css"; 
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 

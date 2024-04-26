@@ -1,6 +1,6 @@
 /* BtnLight.css */
 
-.btn-Light {
+.btn__Light {
   background-color: var(--lightblue);
   color: var(--offwhite);
   padding: 0.6rem 1.1rem 0.6rem 1.1rem;
@@ -16,7 +16,7 @@
   border-color: #add8e6;
 }
 
-.btn-Dark {
+.btn__Dark {
   background-color: var(--mainblue);
   color: var(--offwhite);
   padding: 0.6rem 1.1rem 0.6rem 1.1rem;
