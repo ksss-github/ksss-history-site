@@ -129,14 +129,13 @@
   }
 
   .landingpage__omoss {
-    width: 102rem;
+    width: auto;
     height: 25rem;
     justify-content: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 5rem;
-    margin-left: 2rem;
-    margin-top: 1rem;
+
     background-position: center;
   }
 }
