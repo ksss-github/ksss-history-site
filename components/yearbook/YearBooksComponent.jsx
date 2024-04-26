@@ -19,6 +19,7 @@ const YearBooksComponent = () => {
       try {
         const yearBooksData = await getPdfYearBooks(); // Call the function to fetch yearBooks
         setYearBooks(yearBooksData); // Update component state with fetched data
+        console.log(yearBooksData, "ybdata");
       } catch (error) {
         console.error("Error fetching yearBooks:", error);
       }
