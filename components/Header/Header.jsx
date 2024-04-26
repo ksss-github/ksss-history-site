@@ -13,7 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 768);
+      setIsLargeScreen(window.innerWidth > 904);
     };
 
     // Add event listener to handle window resize
@@ -41,7 +41,7 @@ const Header = () => {
     >
       <div>
         <Image
-          className="ksss-logo"
+          className="navbar__ksss-logo"
           src="/logo.png"
           alt="KSSS Logo"
           width={90}
@@ -92,37 +92,71 @@ const Header = () => {
             </li>
             <li className="navbar-links">
               <IoSearch className="search-icon" style={{ fontSize: "24px" }} />
-              <Image
-                className="swedish-flag"
-                src="/Flag-Sweden.webp"
-                alt="KSSS Logo"
-                width={25}
-                height={30}
-              />
+              <button className="language-button">
+                <Image
+                  className="swedish-flag"
+                  src="/Flag-Sweden.webp"
+                  alt="swedish-flag"
+                  width={25}
+                  height={30}
+                />
+              </button>
+              <div className="dropdown-content">
+                <a href="#" className="language-option">
+                  <Image
+                    className="swedish-flag__dropdown"
+                    src="/Flag-Sweden.webp"
+                    alt="swedish-flag"
+                    width={24}
+                    height={15}
+                  />
+                  SVENSKA
+                </a>
+                <a href="#" className="language-option">
+                  <Image
+                    className="english-flag__dropdown"
+                    src="/british-flag.jpg"
+                    alt="british-flag"
+                    width={24}
+                    height={15}
+                  />
+                  ENGELSKA
+                </a>
+                <a href="#" className="language-option">
+                  <Image
+                    className="german-flag__dropdown"
+                    src="/german-flag.webp"
+                    alt="german-flag"
+                    width={24}
+                    height={15}
+                  />
+                  TYSKA
+                </a>
+              </div>
             </li>
           </ul>
         </nav>
       ) : (
         <>
-          <div className="menu-toggle" onClick={toggleMenu}>
-            {showMenu ? <IoClose /> : <IoMenu />}
+          <div className="navbar__menu-toggle" onClick={toggleMenu}>
+            {showMenu ? <IoClose /> : <IoMenu className="navbar__menu-icon" />}
           </div>
           {showMenu && (
-            <div className={`menu ${showMenu ? "open" : ""}`}>
+            <div className={`navbar__menu ${showMenu ? "open" : ""}`}>
               <IoClose className="close-icon" onClick={toggleMenu} />
               <nav>
                 <ul>
                   <li className="menu-links">
-                    <Link href="/">Hemsidan</Link>
+                    <Link href="/">HEMSIDAN</Link>
                   </li>
                   <li className="menu-links">
-                    <Link href="/timeline">Historisk tidslinjen</Link>
+                    <Link href="/timeline">HISTORISK TIDSLINJEN</Link>
                   </li>
                   <li className="menu-links">
-                    <Link href="/">Årsbockerna</Link>
+                    <Link href="/">ÅRSBÖCKER</Link>
                   </li>
                   <li className="menu-links">
-                    <Link href="/">Om KSSS</Link>
+                    <Link href="/">OM KSSS</Link>
                   </li>
                 </ul>
               </nav>
