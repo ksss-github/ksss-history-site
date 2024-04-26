@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { IoSearch } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import "./Header.css";
@@ -45,8 +44,8 @@ const Header = () => {
           className="navbar__ksss-logo"
           src="/logo.png"
           alt="KSSS Logo"
-          width={90}
-          height={90}
+          width={65}
+          height={65}
         />
       </div>
       {isLargeScreen ? (
@@ -92,7 +91,6 @@ const Header = () => {
               </Link>
             </li>
             <li className="navbar-links">
-              <IoSearch className="search-icon" style={{ fontSize: "24px" }} />
               <button className="language-button">
                 <Image
                   className="swedish-flag"
