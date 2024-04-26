@@ -3,10 +3,10 @@
 .btn__Light {
   background-color: var(--lightblue);
   color: var(--offwhite);
-  padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+  padding: 0.4rem 1rem 0.4rem 1rem;
   border-radius: 0.8rem;
   font-weight: 600;
-  font-size: small;
+  font-size: x-small;
   width: auto;
   border: 0.1rem solid var(--gold);
 }
@@ -19,7 +19,7 @@
 .btn__Dark {
   background-color: var(--mainblue);
   color: var(--offwhite);
-  padding: 0.6rem 1.1rem 0.6rem 1.1rem;
+  padding: 0.4rem 1rem 0.6rem 1rem;
   border-radius: 0.8rem;
   font-weight: 600;
   font-size: small;

@@ -1,45 +1,50 @@
-.achievement {
+.landing__page {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.4rem;
   background-color: var(--offwhite);
 }
 
-.achievement__number {
+.landingpage__number {
   color: var(--red);
   font-weight: 650;
-  font-size: smaller;
+  font-size: small;
 }
 
-.achievement__text {
+.landingpage__p {
   text-transform: uppercase;
-  font-size: smaller;
+  font-size: x-small;
   font-weight: 600;
+  color: var(--mainblue);
+  text-align: center;
 }
 
-.ksss__historia {
+.landingpage__hero {
   width: 100%;
+  height: auto;
 }
 
-.updates {
-  padding: 1.4rem;
+.landingpage__updates {
+  padding: 3rem;
 }
 
-.updates__header {
+.ulandingpage__h2 {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.2rem;
   text-align: center;
   font-family: Montserrat;
+  color: var(--mainblue);
 }
-.updates__text {
-  font-weight: 300;
+.updates__p {
+  font-weight: 100;
   text-align: center;
   font-size: medium;
   font-family: baskervville;
+  color: var(--mainblue);
 }
 
 .event__section {
@@ -48,10 +53,7 @@
 }
 
 .event__card {
-  width: 25rem;
-  height: 10rem;
-  background-image: url(../../public/images/RB.jpg);
-  background-size: 40%;
+  width: auto;
 }
 
 .event__header {
@@ -59,7 +61,7 @@
   color: var(--offwhite);
 }
 
-.omoss__box {
+.landingpage__omoss {
   background-image: url(../../public/images/group.png);
   background-size: cover;
   padding: 2rem;
@@ -70,14 +72,68 @@
   margin-bottom: 1rem;
 }
 
-.omoss__header {
+.landingpage__h6 {
   text-transform: uppercase;
-  font-weight: 900;
-  margin-top: 7rem;
+  font-weight: 700;
+  font-size: medium;
+  margin-top: 8rem;
 }
 
-.omoss__text {
+.landingpage__omoss__p {
   font-weight: 500;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
+  font-size: small;
+}
+
+@media only screen and (min-width: 768px) {
+  img.landingpage__hero {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .landingpage__updates {
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .landingpage__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img.landingpage__hero {
+    width: 40%;
+    height: auto;
+    margin: auto;
+  }
+
+  .landingpage__content {
+    padding: 4rem;
+  }
+
+  .landingpage__content {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .landingpage__updates {
+    padding: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .landingpage__omoss {
+    width: 89rem;
+    height: 25rem;
+    justify-content: center;
+    margin-left: 9rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    margin-top: 1rem;
+    background-position: center;
+  }
 }

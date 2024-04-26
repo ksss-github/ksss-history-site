@@ -4,27 +4,30 @@
   font-family: Montserrat;
 }
 
-.kontakt__text {
-  margin-left: 0.7rem;
-  font-size: medium;
+.footer__h5 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--mainblue);
 }
 
-.email__info,
+.email__info__container,
 .number__info {
   display: flex;
   flex-direction: row;
-  font-weight: 200;
+  font-weight: 300;
 }
 
-.footer__h4 {
-  font-weight: 700;
-  font-size: medium;
+.footer__email__address__p {
+  font-weight: 300;
+  margin-left: 1.3rem;
+  font-weight: 200;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
 }
 
 .website__container {
   margin-top: 1.2rem;
   line-height: 1rem;
-  margin-left: 0.7rem;
 }
 
 ul,
@@ -36,16 +39,30 @@ li {
   text-decoration: underline;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  color: var(--mainblue);
 }
 
-.footer__telefon {
+.footer__telefon__p {
   font-weight: 600;
+  color: var(--mainblue);
+  font-size: 0.9rem;
 }
 
 .footer__telefon__nummer {
-  font-weight: 400;
+  font-weight: 300;
+  margin-left: 1.3rem;
+  font-weight: 200;
+  font-size: 0.875rem;
+  color: var(--mainblue);
 }
 
-.email_text {
-  font-weight: 500;
+.email_p {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--mainblue);
+}
+.footer__copyright {
+  font-size: xx-small;
+  text-align: center;
+  color: var(--mainblue);
 }
