@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import PDFBookViewer from "./PDFBookViewer";
 import YearBookSubHeader from "./YearBookSubHeader";
-import { getYearBooks } from "../../sanity/sanity-utils"; // Import the function to fetch yearBooks from Sanity
+import { getPdfYearBooks } from "../../sanity/sanity-utils"; // Import the function to fetch yearBooks from Sanity
 import "./YearBooksComponent.css";
 
 const YearBooksComponent = () => {
@@ -16,7 +17,7 @@ const YearBooksComponent = () => {
     // Fetch yearBooks data from Sanity when the component mounts
     const fetchYearBooks = async () => {
       try {
-        const yearBooksData = await getYearBooks(); // Call the function to fetch yearBooks
+        const yearBooksData = await getPdfYearBooks(); // Call the function to fetch yearBooks
         setYearBooks(yearBooksData); // Update component state with fetched data
       } catch (error) {
         console.error("Error fetching yearBooks:", error);
@@ -30,7 +31,7 @@ const YearBooksComponent = () => {
 
   const handleLogin = () => {
     // Check if username and password match hard-coded values
-    if (username === "Niklas" && password === "test") {
+    if (username === "KSSS" && password === "test") {
       setLoggedIn(true); // Set logged-in state to true
       setShowLogin(false); // Hide login form
     } else {
@@ -39,24 +40,24 @@ const YearBooksComponent = () => {
   };
 
   // Function to group years into decades
-  const groupYearsIntoDecades = (years) => {
+  const groupYearsIntoDecades = (pdfyears) => {
     // Create an empty object to store decades as keys and corresponding years as values
     const decades = {};
     // Iterate over each year in the provided array
-    years.forEach((year) => {
+    pdfyears.forEach((pdfyear) => {
       // Calculate the decade for the current year (e.g., 1970 -> 1970s)
-      const decade = Math.floor(year.year / 10) * 10;
+      const decade = Math.floor(pdfyear.pdfyear / 10) * 10;
       // If the decade key does not exist in the decades object, create an empty array for it
       if (!decades[decade]) {
         decades[decade] = [];
       }
       // Push the current year into the array corresponding to its decade
-      decades[decade].push(year);
+      decades[decade].push(pdfyear);
     });
 
     // Sort years within each decade in ascending order
     Object.values(decades).forEach((decade) => {
-      decade.sort((a, b) => a.year - b.year);
+      decade.sort((a, b) => a.pdfyear - b.pdfyear);
     });
     // Convert the object into an array of [decade, years] pairs and sort them by decade in reverse order
     return Object.entries(decades).sort((a, b) => b[0] - a[0]);
@@ -78,9 +79,9 @@ const YearBooksComponent = () => {
               <div className="year-books-component__container-decades-books">
                 {years.map((book) => (
                   <PDFBookViewer
-                    key={book.year}
+                    key={book.pdfyear}
                     pdf={book.pdf}
-                    year={book.year}
+                    pdfyear={book.pdfyear}
                   />
                 ))}
               </div>
@@ -94,15 +95,23 @@ const YearBooksComponent = () => {
       {showLogin && (
         <div className="year-books-component__modal-overlay">
           <div className="year-books-component__login-form">
+            <div>
+              <h2 className="year-books-component__login-h2">LOGGA IN</h2>
+              <p>
+                För att ta del av KSSS årsböcker kräver det att du loggar in
+              </p>
+            </div>
             <input
+              className="year-books-component__input"
               type="text"
-              placeholder="Username"
+              placeholder="Användarnamn"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
+              className="year-books-component__input"
               type="password"
-              placeholder="Password"
+              placeholder="Lösenord"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -110,8 +119,9 @@ const YearBooksComponent = () => {
               className="year-books-component__login-button"
               onClick={handleLogin}
             >
-              Login
+              LOGGA IN
             </button>
+            <Link href="/">Ej Medlem</Link>
           </div>
         </div>
       )}

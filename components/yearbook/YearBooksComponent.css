@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 .year-books-component__container {
   display: flex;
   flex-direction: column;
@@ -11,9 +12,6 @@
 
 .year-books-component__container-decades-books {
   display: flex;
-  /* border: 2px #000000 solid;
-    border-radius: 5px;
-    background-color: #b5b1b182; */
   background-color: #fff;
   align-items: end;
   padding: 2px 0;
@@ -26,13 +24,14 @@
 
 .year-books-component__decades-text {
   font-size: 1rem;
-  margin: 10px;
+  font-family: Montserrat;
+  font-weight: bold;
 }
 
 .line {
   width: 100%;
   height: 6px;
-  background-color: rgba(219, 224, 222, 0.702);
+  background-color: #edebe7;
 }
 
 .year-books-component__modal-overlay {
@@ -53,16 +52,30 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #162743;
+  background-color: #fdfbf8;
   border-radius: 20px;
   padding: 20px 20px;
-  width: fit-content;
+  width: 350px;
   height: fit-content;
+}
+
+.year-books-component__input {
+  height: 40px;
 }
 
 .year-books-component__login-button {
   color: #fff;
-  background-color: #0479ae;
+  background-color: #162743;
+  font-family: Montserrat;
+  margin-top: 30px;
+  font-size: 16px;
   border: black 1px solid;
+  height: 50px;
   border-radius: 30px;
+  cursor: pointer;
+}
+
+.year-books-component__login-h2 {
+  font-family: Montserrat;
+  text-align: center;
 }

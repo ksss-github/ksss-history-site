@@ -1,6 +1,6 @@
 import "./BookCover.css";
 
-function BookCover({ year, onClick }) {
+function BookCover({ pdfyear, onClick }) {
   return (
     <div>
       <div className="bookcover__book-cover" onClick={onClick}>
@@ -9,10 +9,10 @@ function BookCover({ year, onClick }) {
           <br />
           BOK
           <br />
-          {year}
+          {pdfyear}
         </p>
       </div>
-      <p className="bookcover__under-text">Årsbok {year}</p>
+      <p className="bookcover__under-text">Årsbok {pdfyear}</p>
     </div>
   );
 }
