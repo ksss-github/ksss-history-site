@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Btn.css'; 
+import React from "react";
+import PropTypes from "prop-types";
+import "./Btn.module.css";
 
 const BtnLight = ({ onClick, disabled, children, className }) => {
   return (
@@ -23,7 +23,7 @@ BtnLight.propTypes = {
 
 BtnLight.defaultProps = {
   disabled: false,
-  className: '',
+  className: "",
 };
 
 export default BtnLight;
