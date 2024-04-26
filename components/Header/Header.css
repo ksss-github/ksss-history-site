@@ -19,6 +19,7 @@
   font-weight: bold;
   font-size: larger;
   padding-bottom: 22px;
+  text-decoration: none;
 }
 
 .navbar-links a {
@@ -26,12 +27,10 @@
   color: inherit; /* Inherit color from parent */
   transition: color 0.3s;
 }
-.navbar-links a:hover {
-  color: red; /* Change font color on hover */
-}
 
-.navbar-links a.active {
-  color: red; /* Change font color when active */
+.navbar-links a:hover {
+  color: #edebe7;
+  background-color: #162743; /* Change font color on hover */
 }
 
 /* Add background frame for active link */
@@ -45,7 +44,7 @@
   bottom: -2px; /* Adjust position to frame the link */
 }
 
-.ksss-logo {
+.navbar__ksss-logo {
   padding-left: 4vh;
   width: auto;
 }
@@ -57,15 +56,17 @@
   width: auto;
   height: auto;
 }
+
 .search-icon {
   margin-left: 0px;
 }
-.menu-toggle {
+
+.navbar__menu-toggle {
   display: block;
 }
 
 /* Styles for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 904px) {
   .header {
     display: flex;
     align-items: center;
@@ -76,8 +77,8 @@
     display: none;
   }
 
-  .ksss-logo {
-    padding-left: 0.5vh;
+  .navbar__ksss-logo {
+    padding-left: 2vh;
     width: auto;
   }
 
@@ -85,16 +86,16 @@
     padding-left: 25px;
   }
 
-  .menu-toggle {
+  .navbar__menu-toggle {
     display: block; /* Show menu toggle for smaller screens */
     cursor: pointer;
     color: #162743;
     width: 40px;
     height: 40px;
-    padding-right: 5vh;
+    padding-right: 10vh;
   }
 
-  .menu {
+  .navbar__menu {
     display: none;
     flex-direction: column;
     position: fixed;
@@ -107,20 +108,23 @@
     z-index: 100; /* Ensure it's above other content */
     overflow-y: auto;
   }
+  .navbar__menu-icon {
+    font-size: 32px;
+  }
 
-  .menu.open {
+  .navbar__menu.open {
     display: flex;
   }
 
-  .menu ul,
-  .menu ul li {
+  .navbar__menu ul,
+  .navbar__menu ul li {
     list-style: none;
     margin: 0;
     padding: 0;
     text-decoration: none;
   }
 
-  .menu ul li a {
+  .navbar__menu ul li a {
     padding-top: 5vh;
     color: #162743;
     text-decoration: none;
@@ -136,10 +140,66 @@
     margin-top: 20px;
     /* Add more styles as needed */
   }
+
+  .menu-links:hover a {
+    color: #edebe7;
+    background-color: #162743; /* Add your hover styles here */
+  }
 }
 /* Styles for larger screens */
-@media (min-width: 769px) {
-  .menu-toggle {
+@media (min-width: 904px) {
+  .navbar__menu-toggle {
     display: none; /* Hide menu toggle for larger screens */
   }
+}
+@media (max-width: 1034px) {
+  .navbar-links {
+    font-size: smaller; /* Adjust the font size as needed */
+  }
+}
+.language-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  max-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: smaller;
+}
+
+.dropdown-content a:hover {
+  background-color: #162743;
+  color: #edebe7;
+}
+
+.navbar-links:hover .dropdown-content {
+  display: block;
+}
+.language-option {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* remove underline */
+  color: inherit; /* inherit color from parent */
+}
+
+.swedish-flag__dropdown {
+  margin-right: 5px; /* Add some spacing between the flag and text */
+}
+.language-option .swedish-flag__dropdown,
+.language-option .english-flag__dropdown,
+.language-option .german-flag__dropdown {
+  margin-right: 2px; /* Adjust the padding as needed */
 }

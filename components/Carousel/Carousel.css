@@ -3,17 +3,48 @@
   justify-content: center;
   align-items: center;
   padding-top: 5px;
-  width: 100%;
-  height: 70%;
+  width: 100vw; /* Set width to 100% of viewport width */
+  height: 70vh; /* Set height to 70% of viewport height */
   position: absolute;
-  top: 47%; /* Positioning at 50% from the top */
-  left: 50%; /* Positioning at 50% from the left */
-
-  transform: translate(-50%, -50%); /* Centering the carousel */
+  top: 120px; /* Positioning 120px from the top of the screen */
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
 }
 
-/* Rest of your carousel CSS remains unchanged */
+/* Responsive adjustments */
+@media (max-width: 1042px) {
+  .carousel {
+    height: 60vh; /* Adjusted height for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 50vh; /* Adjusted height for smaller screens */
+  }
+}
+@media (max-width: 700px) {
+  .carousel {
+    height: 45vh; /* Adjusted height for screens up to 700px width */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel {
+    height: 40vh; /* Adjusted height for smaller screens */
+  }
+}
+@media (max-width: 430px) {
+  .carousel {
+    height: 27vh; /* Adjusted height for smaller screens */
+  }
+}
+@media (max-width: 420px) {
+  .carousel {
+    height: 26vh; /* Adjusted height for smaller screens */
+  }
+}
 
 .carousel > input[type="radio"] {
   position: absolute;
@@ -172,14 +203,14 @@
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   opacity: 0;
-  z-index: 2;
+  z-index: 250;
 }
 
 .carousel__prev > label:hover,
 .carousel__prev > label:focus,
 .carousel__next > label:hover,
 .carousel__next > label:focus {
-  opacity: 0.5 !important;
+  opacity: 0.9 !important;
 }
 
 .carousel__prev > label:before,
@@ -207,9 +238,10 @@
 }
 
 .carousel__prev {
+  position: absolute;
   color: black;
-  left: 50%;
-  z-index: 100;
+  left: 5%;
+  z-index: 200;
 }
 
 .carousel__prev > label:before {
@@ -220,9 +252,10 @@
 }
 
 .carousel__next {
+  position: absolute;
   color: black;
-  right: 2%;
-  z-index: 100;
+  right: 5%;
+  z-index: 200;
 }
 
 .carousel__next > label:before {
@@ -241,14 +274,14 @@
 }
 
 .carousel__nav > label {
-  border: 1px solid whitesmoke;
+  border: 1px solid #b38e49;
   display: inline-block;
   border-radius: 50%;
   cursor: pointer;
   margin: 0 0.125%;
   width: 20px;
   height: 20px;
-  background-color: #0479ae;
+  background-color: #162743;
 }
 
 *,
@@ -264,31 +297,46 @@ body {
   margin: 0;
 }
 
-.container {
-  display: flex;
-  width: 2000px;
-
-  min-width: 900px;
-  margin: 20px auto;
-}
-.text-overlay {
+.carousel__text-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 600px;
   padding: 20px;
   color: whitesmoke;
   text-align: center;
-  font-size: large; /* Adjusted font size for responsiveness */
+  font-size: x-large; /* Adjusted font size for responsiveness */
 }
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
-  .text-overlay {
-    width: 90%; /* Adjusted width for smaller screens */
-    font-size: medium; /* Adjusted font size for smaller screens */
+  .carousel__text-overlay {
+    width: 70%;
+    font-size: medium;
+  }
+  .carousel__nav > label {
+    border: 1px solid #b38e49;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 0.125%;
+    width: 15px;
+    height: 15px;
+    background-color: #162743;
   }
 }
+/*
+.button-dark {
+  background-color: var(--mainblue) !important;
+  color: var(--offwhite) !important;
+  padding: 0.6rem 1.1rem 0.6rem 1.1rem !important;
+  border-radius: 0.8rem !important;
+  font-weight: 600 !important;
+  font-size: small !important;
+  width: auto !important;
+  border: 0.1rem solid var(--gold) !important;
+}
+*/
