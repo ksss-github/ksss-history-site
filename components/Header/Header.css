@@ -45,8 +45,10 @@
 }
 
 .navbar__ksss-logo {
+  padding-top: 0.2rem;
   padding-left: 4vh;
-  width: auto;
+  width: 9rem;
+  height: auto;
 }
 
 .swedish-flag {
@@ -78,8 +80,10 @@
   }
 
   .navbar__ksss-logo {
-    padding-left: 2vh;
-    width: auto;
+    padding-top: 0.2rem;
+    padding-left: 4vh;
+    width: 9rem;
+    height: auto;
   }
 
   .swedish-flag {

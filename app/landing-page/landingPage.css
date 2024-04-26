@@ -98,9 +98,6 @@
     height: auto;
     margin: auto;
   }
-
-  .landingpage__updates {
-  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -132,13 +129,13 @@
   }
 
   .landingpage__omoss {
-    width: 89rem;
+    width: 102rem;
     height: 25rem;
     justify-content: center;
-    margin-left: 9rem;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 5rem;
+    margin-left: 2rem;
     margin-top: 1rem;
     background-position: center;
   }
