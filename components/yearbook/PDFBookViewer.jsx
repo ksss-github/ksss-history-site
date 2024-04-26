@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { pdfjs } from "react-pdf"; // Configure PDF this is most add to make the pdf-reader work !
-import BookSpine from "./BookCover";
+import BookCover from "./BookCover";
 import ModalPDF from "./ModalPDF";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css"; // this is most add to make the pdf-reader work
 import "react-pdf/dist/esm/Page/TextLayer.css"; // this is most add to make the pdf-reader work
@@ -11,7 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-function PDFBookViewer({ pdf, year }) {
+function PDFBookViewer({ pdf, pdfyear }) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,7 +43,7 @@ function PDFBookViewer({ pdf, year }) {
 
   return (
     <>
-      <BookSpine year={year} onClick={handleBookClickOpenPDF} />
+      <BookCover pdfyear={pdfyear} onClick={handleBookClickOpenPDF} />
       {isModalOpen && (
         <ModalPDF
           pdf={pdf}

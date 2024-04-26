@@ -15,7 +15,7 @@ function ModalPDF({
     <div className="modalpdf__modal-overlay">
       <div className="modalpdf__modal-content">
         <button className="modalpdf__close-button" onClick={onCloseModal}>
-          Close
+          X
         </button>
         <Document
           className="modalpdf__pdf-box"
@@ -44,7 +44,7 @@ function ModalPDF({
           </button>
         </div>
         <a className="modalpdf__download" href={pdf} download>
-          Download PDF
+          Ladda ner
         </a>
       </div>
     </div>

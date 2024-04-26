@@ -23,13 +23,14 @@
 
 .modalpdf__close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: aliceblue;
-  color: black;
+  top: 30px;
+  right: 30px;
+  border: solid rgba(0, 0, 0, 0.656) 0.8px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #0479ae;
+  color: #edebe7;
   cursor: pointer;
 }
 
@@ -38,29 +39,29 @@
 }
 
 .modalpdf__navigation-button {
-  margin-right: 10px;
-  border: solid black 1px;
+  border: solid rgba(0, 0, 0, 0.656) 0.8px;
   border-radius: 50%;
   height: 30px;
   width: 30px;
-  background-color: aliceblue;
-  color: black;
+  background-color: #0479ae;
+  font-weight: bolder;
+  color: #edebe7;
   cursor: pointer;
 }
 
 .modalpdf__number {
   margin: 0 10px;
-  background-color: aliceblue;
+  background-color: #0479ae;
+  color: #edebe7;
   border-radius: 3px;
-  padding: 2px 5px;
-  border: solid black 1px;
+  padding: 5px 7px;
+  border-radius: 8px;
+  border: solid rgba(0, 0, 0, 0.656) 0.8px;
 }
 
 .modalpdf__download {
-  background-color: aliceblue;
-  border-radius: 3px;
-  padding: 2px 5px;
-  border: solid black 1px;
+  margin-top: 10px;
+  color: black;
 }
 
 .react-pdf__Page__canvas {
