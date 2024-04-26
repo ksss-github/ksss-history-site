@@ -1,4 +1,3 @@
-"use client";
 import { Montserrat } from "next/font/google";
 import Header from "../components/Header/Header.jsx";
 import Footer from "../components/Footer/Footer.jsx";

@@ -123,7 +123,7 @@ export default function Timeline({ timelineData }) {
               <li
                 key={crypto.randomUUID()}
                 id={year}
-                className="text-center list-none cursor-pointer"
+                className="text-center list-none cursor-pointer text-white"
                 ref={refs1[year]}
                 onClick={() => setCurrentDecadeOnSlider(year)}
               >
