@@ -322,15 +322,16 @@ body {
     background-color: #162743;
   }
 }
-/*
-.button-dark {
-  background-color: var(--mainblue) !important;
-  color: var(--offwhite) !important;
-  padding: 0.6rem 1.1rem 0.6rem 1.1rem !important;
-  border-radius: 0.8rem !important;
-  font-weight: 600 !important;
-  font-size: small !important;
-  width: auto !important;
-  border: 0.1rem solid var(--gold) !important;
+
+.custom-button {
+  background-color: #162743; /* Navy color */
+  color: var(--offwhite); /* Offwhite text color */
+  width: 11rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: small;
 }
-*/
