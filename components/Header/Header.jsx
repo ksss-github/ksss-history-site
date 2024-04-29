@@ -39,7 +39,7 @@ const Header = () => {
     <header
       className={`header ${isLargeScreen ? "large-screen" : "small-screen"}`}
     >
-      <div>
+      <div className="header-logo-container">
         <Image
           className="navbar__ksss-logo"
           src="/logo.png"
@@ -49,8 +49,8 @@ const Header = () => {
         />
       </div>
       {isLargeScreen ? (
-        <nav>
-          <ul>
+        <nav className="header-navbar">
+          <ul className="header-navbar-list">
             <li
               className={`navbar-links ${
                 activeLink === "home" ? "active" : ""
@@ -143,8 +143,8 @@ const Header = () => {
           {showMenu && (
             <div className={`navbar__menu ${showMenu ? "open" : ""}`}>
               <IoClose className="close-icon" onClick={toggleMenu} />
-              <nav>
-                <ul>
+              <nav >
+                <ul className="header-hamburger-list">
                   <li className="menu-links">
                     <Link href="/">HEMSIDAN</Link>
                   </li>

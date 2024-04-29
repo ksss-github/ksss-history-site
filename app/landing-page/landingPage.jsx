@@ -52,7 +52,7 @@ export default async function LandingPage() {
           />
 
           <div className="landingpage__updates">
-            <h2 className="ulandingpage__h2">Från startskott till idag</h2>
+            <h2 className="landingpage__h2">Från startskott till idag</h2>
             <p className="landingpage__p">
               Utforska KSSS historia, från dess grundande 1830, och upptäck en
               rik värld av seglingskultur och framstående prestationer. Det
@@ -62,11 +62,14 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      
       <section className="landingpage__historia__container">
         <div className="landingpage__historia">
           <LandingPage__card events={events} />
         </div>
       </section>
+
+      
 
       <section className="landingpage__omoss">
         <h6 className="landingpage__h6">träffa historiska kommitteen</h6>

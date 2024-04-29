@@ -3,22 +3,23 @@
 /* Styles for larger screens */
 .header {
   width: 100%;
-  height: 120px;
+  height: 80px;
   background-color: #edebe7;
   font-family: Montserrat;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 0 1rem;
 }
 
 .navbar-links {
   list-style: none;
   color: #162743;
-  display: inline-block;
-  margin-right: 50px;
   font-weight: bold;
   font-size: larger;
-  padding-bottom: 22px;
   text-decoration: none;
 }
 
@@ -44,23 +45,29 @@
   bottom: -2px; /* Adjust position to frame the link */
 }
 
+.header-navbar{
+  display: flex;
+  align-items: center;
+}
+
+.header-navbar-list{
+  display: flex;
+  gap: 2rem;
+}
+
+.header-logo-container{
+  width: 4rem;
+  height: 4rem;
+}
+
 .navbar__ksss-logo {
-  padding-top: 0.2rem;
-  padding-left: 4vh;
-  width: 9rem;
+  width: 4rem;
   height: auto;
 }
 
 .swedish-flag {
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-left: 30px;
   width: auto;
   height: auto;
-}
-
-.search-icon {
-  margin-left: 0px;
 }
 
 .navbar__menu-toggle {
@@ -69,21 +76,9 @@
 
 /* Styles for smaller screens */
 @media (max-width: 904px) {
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 
   .navbar-links {
     display: none;
-  }
-
-  .navbar__ksss-logo {
-    padding-top: 0.2rem;
-    padding-left: 4vh;
-    width: 9rem;
-    height: auto;
   }
 
   .swedish-flag {
@@ -94,9 +89,6 @@
     display: block; /* Show menu toggle for smaller screens */
     cursor: pointer;
     color: #162743;
-    width: 40px;
-    height: 40px;
-    padding-right: 10vh;
   }
 
   .navbar__menu {
@@ -118,6 +110,19 @@
 
   .navbar__menu.open {
     display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .header-hamburger-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .close-icon {
+    align-self: flex-end;
+    font-size: 2rem;
   }
 
   .navbar__menu ul,
@@ -129,18 +134,14 @@
   }
 
   .navbar__menu ul li a {
-    padding-top: 5vh;
     color: #162743;
     text-decoration: none;
     font-weight: bold;
-    margin-bottom: 10px;
   }
 
   /* Show the menu links */
   .menu-links {
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
     margin-top: 20px;
     /* Add more styles as needed */
   }
@@ -170,8 +171,9 @@
 .dropdown-content {
   display: none;
   position: absolute;
+  right: 0;
   background-color: #f9f9f9;
-  max-width: 200px;
+  max-width: 400px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
