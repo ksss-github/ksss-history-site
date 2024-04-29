@@ -9,8 +9,9 @@
 
 .landingpage__number {
   color: var(--red);
-  font-weight: 650;
+  font-weight: bolder;
   font-size: small;
+  margin-top: 1rem;
 }
 
 .landingpage__p {
@@ -19,6 +20,7 @@
   font-weight: 600;
   color: var(--mainblue);
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .landingpage__hero {
