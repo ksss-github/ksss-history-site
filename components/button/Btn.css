@@ -4,9 +4,9 @@
   background-color: var(--lightblue);
   color: var(--offwhite);
   padding: 0.4rem 1rem 0.4rem 1rem;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   font-weight: 600;
-  font-size: x-small;
+  font-size: small;
   width: auto;
   border: 0.1rem solid var(--gold);
 }
