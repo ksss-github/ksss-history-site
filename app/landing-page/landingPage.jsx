@@ -5,8 +5,9 @@ import "./landingPage.css";
 import LandingPage__card from "../../components/LandingPage__card/LandingPage__card";
 import afore2013 from "../../public/images/afore2013.jpg";
 import Carousel from "../../components/Carousel/Carousel";
+import Link from 'next/link'; // Import Link from 'next/link'
 
-export default async function LandingPage() {
+export default function LandingPage() {
   const events = [
     {
       Year: "1905",
@@ -39,7 +40,7 @@ export default async function LandingPage() {
         </div>
         <div>
           <p className="landingpage__number">50+</p>
-          <p className="landingpage__p"> medaljer</p>
+          <p className="landingpage__p">medaljer</p>
         </div>
       </section>
 
@@ -62,21 +63,21 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      
       <section className="landingpage__historia__container">
         <div className="landingpage__historia">
           <LandingPage__card events={events} />
         </div>
       </section>
 
-      
-
       <section className="landingpage__omoss">
         <h6 className="landingpage__h6">träffa historiska kommitteen</h6>
         <p className="landingpage__omoss__p">
           Träffa personerna som arbetar på att bevara KSSS historia
         </p>
-        <BtnLight>OM OSS</BtnLight>
+   
+        <Link href="/about-us">
+          <BtnLight>Om oss</BtnLight>
+        </Link>
       </section>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Btn.module.css";
+import "./Btn.css";
 
 const BtnLight = ({ onClick, disabled, children, className }) => {
   return (
