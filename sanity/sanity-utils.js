@@ -91,16 +91,44 @@ export async function getFullEvent(slug) {
 //   "id": value.current
 // }
 
-export async function getYearBooks() {
+// export async function getYearBooks() {
+//   try {
+//     return await createClient(clientConfig).fetch(
+//       groq`*[_type == "yearBook"]{
+//         year,
+//         "pdf": pdf.asset->url
+//       }`
+//     );
+//   } catch (error) {
+//     console.error("Error fetching yearBooks:", error);
+//     return [];
+//   }
+// }
+
+// export async function getPdfYearBooks() {
+//   try {
+//     return await createClient(clientConfig).fetch(
+//       groq`*[_type == "pdfyearBook"]{
+//         pdfyear,
+//         "pdf": pdf.asset->url
+//       }`
+//     );
+//   } catch (error) {
+//     console.error("Error fetching pdfyearBooks:", error);
+//     return [];
+//   }
+// }
+
+export async function getPdfYearBooks() {
   try {
     return await createClient(clientConfig).fetch(
-      groq`*[_type == "yearBook"]{
-        year,
-        "pdf": pdf.asset->url
+      groq`*[_type == "yearbookpdfurl"]{
+        pdfyear,
+        pdf
       }`
     );
   } catch (error) {
-    console.error("Error fetching yearBooks:", error);
+    console.error("Error fetching pdfyearBooks:", error);
     return [];
   }
 }
