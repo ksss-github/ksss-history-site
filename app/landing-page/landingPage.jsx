@@ -46,16 +46,12 @@ export default function LandingPage() {
 
       <section className="landingpage__section">
         <div className="landingpage__content">
-          <Image
-            src={afore2013}
-            alt="KSSS historia"
-            className="landingpage__hero"
-          />
+          <div className="landingpage-banner-image"></div>
 
           <div className="landingpage__updates">
             <h2 className="landingpage__h2">Från startskott till idag</h2>
             <p className="landingpage__p">
-              Utforska KSSS historia, från dess grundande 1830, och upptäck en
+              Utforska KSSS historia från dess grundande 1830, och upptäck en
               rik värld av seglingskultur och framstående prestationer. Det
               finns mycket att hitta!
             </p>
@@ -70,13 +66,13 @@ export default function LandingPage() {
       </section>
 
       <section className="landingpage__omoss">
-        <h6 className="landingpage__h6">träffa historiska kommitteen</h6>
+        <h2 className="landingpage__omoss__h2">träffa historiska kommitteen</h2>
         <p className="landingpage__omoss__p">
           Träffa personerna som arbetar på att bevara KSSS historia
         </p>
    
         <Link href="/about-us">
-          <BtnLight>Om oss</BtnLight>
+          <BtnLight>OM OSS</BtnLight>
         </Link>
       </section>
     </div>

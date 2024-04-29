@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useState, useRef } from "react";
 import classnames from "classnames";
 import "./multiRangeSlider.css";
 
-const MultiRangeSlider = ({ min, max, onChange }) => {
+const MultiRangeSlider = ({ isReset, onReset, min, max, onChange }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(null);
@@ -48,9 +48,19 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
   }, [minVal, maxVal, onChange]);
 
   useEffect(() => {
-    setMinVal(min);
-    setMaxVal(max);
+    setMinVal(() => min);
+    setMaxVal(() => max);
   }, [min, max]);
+
+  useEffect(() => {
+    if (isReset) {
+      setMinVal(min);
+      setMaxVal(max);
+      onReset();
+    }
+  }, [isReset, min, max, onReset]);
+
+  console.log(minVal, maxVal, "minVal, maxVal")
 
   return (
     <div className="slider-container">

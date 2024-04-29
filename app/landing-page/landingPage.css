@@ -15,12 +15,12 @@
 }
 
 .landingpage__p {
-  text-transform: uppercase;
-  font-size: x-small;
-  font-weight: 600;
+  font-size: 1.2rem;
   color: var(--mainblue);
   text-align: center;
-  margin-bottom: 1rem;
+  max-width: 35rem;
+  margin: 0 auto;
+  font-family: Baskervville;
 }
 
 .landingpage__hero {
@@ -28,12 +28,26 @@
   height: auto;
 }
 
+.landingpage__content{
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+
+.landingpage-banner-image {
+  background-image: url(../../public/images/afore2013.jpg);
+background-repeat: no-repeat;
+background-position: top;
+background-size: cover;
+height: 20rem;
+}
+
 .landingpage__updates {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
   padding: 3rem;
-  flex: 1;
 }
 
 .landingpage__h2 {
@@ -44,13 +58,7 @@
   font-family: Montserrat;
   color: var(--mainblue);
 }
-.landingpage__p {
-  font-weight: 100;
-  text-align: center;
-  font-size: 1rem;
-  font-family: baskervville;
-  color: var(--mainblue);
-}
+
 
 .event__section {
   background-color: var(--mainblue);
@@ -70,42 +78,32 @@
 .landingpage__omoss {
   background-image: url(../../public/images/omOss.JPG);
   background-size: cover;
-  background-color: rgba(0, 0, 128, 0.3);
   padding: 2rem;
   background-position: center;
   color: var(--offwhite);
   text-align: center;
   font-size: 1.2rem;
   font-family: Baskervville;
-  height: 30rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
 }
 
-.landingpage__omoss::before {
-  content: ""; /* Create a pseudo-element */
-  position: absolute; /* Position it absolutely over the element */
-  top: 0;
-  left: 0;
-  width: 100%; /* Cover the entire width of the element */
-  height: 100%; /* Cover the entire height of the element */
-}
-
-.landingpage__h6 {
+.landingpage__omoss__h2 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: medium;
   z-index: 1;
+  font-family: Montserrat;
+  font-size: 2rem;
 }
 
 .landingpage__omoss__p {
-  font-weight: 500;
-  margin-top: 0.2rem;
+  font-size: 1.2rem;
+  text-align: center;
   margin-bottom: 1rem;
-  font-size: small;
-  z-index: 1;
 }
 
 .landing-page-separator {
@@ -113,13 +111,6 @@
   background-color: var(--gold);
 }
 
-@media only screen and (min-width: 768px) {
-  img.landingpage__hero {
-    width: 100%;
-    height: auto;
-    margin: auto;
-  }
-}
 
 @media only screen and (min-width: 768px) {
   .landingpage__section {
@@ -127,15 +118,11 @@
     flex-direction: column;
   }
 
-  img.landingpage__hero {
-    width: 50%;
-    height: auto;
-    margin: auto;
-    flex: 1;
+  .landingpage__content {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .landingpage__content {
-    display: flex;
-    flex-direction: row;
+  .landingpage-banner-image {
+  height: 35rem;
   }
 }

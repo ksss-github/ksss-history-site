@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import MultiRangeSlider from "../MultiRangeSlider/MultiRangeSlider";
 import {
   getAllCategoriesFilter,
@@ -13,6 +14,8 @@ export default function FilterDesktopRange({
   setCategoriesToFilter,
   setDecadesToFilter,
 }) {
+  const [isReset, setIsReset] = useState(false);
+
   // GET ALL CATEGORIES FOR FILTERING
   const allCategories = getAllCategoriesFilter(timelineData);
 
@@ -25,6 +28,7 @@ export default function FilterDesktopRange({
   // HANDLE FILTER RESET BUTTON
   function handleFilterReset() {
     setCategoriesToFilter(["main"]);
+    setIsReset(true);
     setDecadesToFilter([
       allDecadesFromCategoriesToFilter[0],
       allDecadesFromCategoriesToFilter[
@@ -32,6 +36,7 @@ export default function FilterDesktopRange({
       ],
     ]);
   }
+
 
   return (
     <div
@@ -44,6 +49,8 @@ export default function FilterDesktopRange({
       <div className="bg-white">
         <p className="px-2">ÅRTIONDE</p>
         <MultiRangeSlider
+        isReset={isReset}
+        onReset={() => setIsReset(false)}
           min={allDecadesFromCategoriesToFilter[0]}
           max={
             allDecadesFromCategoriesToFilter[

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import MultiRangeSlider from "../MultiRangeSlider/MultiRangeSlider";
 import {
   getAllCategoriesFilter,
@@ -15,6 +16,8 @@ export default function FilterMobileRange({
   showFilter,
   setShowFilter
 }) {
+  const [isReset, setIsReset] = useState(false);
+
   // GET ALL CATEGORIES FOR FILTERING
   const allCategories = getAllCategoriesFilter(timelineData);
 
@@ -27,6 +30,7 @@ export default function FilterMobileRange({
   // HANDLE FILTER RESET BUTTON
   function handleFilterReset() {
     setCategoriesToFilter(["main"]);
+    setIsReset(true);
     setDecadesToFilter([
       allDecadesFromCategoriesToFilter[0],
       allDecadesFromCategoriesToFilter[
@@ -34,6 +38,8 @@ export default function FilterMobileRange({
       ],
     ]);
   }
+
+  console.log("hello from MOBILE")
 
   return (
     <div
@@ -60,14 +66,16 @@ export default function FilterMobileRange({
         <div className="bg-white">
           <p className="px-2">ÅRTIONDE</p>
           <MultiRangeSlider
-            min={allDecadesFromCategoriesToFilter[0]}
-            max={
-              allDecadesFromCategoriesToFilter[
-                allDecadesFromCategoriesToFilter.length - 1
-              ]
-            }
-            onChange={setDecadesToFilter}
-          />
+        isReset={isReset}
+        onReset={() => setIsReset(false)}
+          min={allDecadesFromCategoriesToFilter[0]}
+          max={
+            allDecadesFromCategoriesToFilter[
+              allDecadesFromCategoriesToFilter.length - 1
+            ]
+          }
+          onChange={setDecadesToFilter}
+        />
         </div>
         <div className="px-2">
           <p>KATEGORIER</p>

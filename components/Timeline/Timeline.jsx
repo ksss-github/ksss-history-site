@@ -6,12 +6,14 @@ import "./timeline.css";
 import FilterDesktopRange from "./FilterDesktopRange";
 import FilterMobileRange from "./FilterMobileRange";
 import RulerLines from "./RulerLines";
+import { useMediaQuery } from 'react-responsive';
 
 export default function Timeline({ timelineData }) {
   const [categoriesToFilter, setCategoriesToFilter] = useState(["main"]);
   const [currentDecadeOnSlider, setCurrentDecadeOnSlider] = useState("");
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [showFilter, setShowFilter] = useState(false);
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 768 });
   const [decadesToFilter, setDecadesToFilter] = useState(() => {
     if (
       timelineData.filter((event) => event.tagIds.includes("main")).length === 0
@@ -36,6 +38,7 @@ export default function Timeline({ timelineData }) {
       return [decades[0], decades[decades.length - 1]];
     }
   });
+  
 
   // RENDER DYANMICALLY THE NUMBER OF LINES ON THE RULER BASED ON THE VIEWPORT WIDTH
   useEffect(() => {
@@ -114,16 +117,18 @@ export default function Timeline({ timelineData }) {
     }
   }, [currentDecadeOnSlider]);
 
+  console.log("hello from timeline")
+
   return (
     <div>
-      <FilterMobileRange
+      {!isDesktopOrLaptop && <FilterMobileRange
         timelineData={timelineData}
         categoriesToFilter={categoriesToFilter}
         setCategoriesToFilter={setCategoriesToFilter}
         setDecadesToFilter={setDecadesToFilter}
         showFilter={showFilter}
         setShowFilter={setShowFilter}
-      />
+      />}
 
       {/* Timeline */}
       <div className=" bg-[#fff] flex flex-col gap-3 relative">
@@ -175,12 +180,12 @@ export default function Timeline({ timelineData }) {
       </div>
 
       <section className="grid grid-cols-1 md:grid-cols-[22rem,_1fr] h-lvh">
-        <FilterDesktopRange
+        {isDesktopOrLaptop && <FilterDesktopRange
           timelineData={timelineData}
           categoriesToFilter={categoriesToFilter}
           setCategoriesToFilter={setCategoriesToFilter}
           setDecadesToFilter={setDecadesToFilter}
-        />
+        />}
         <div className="flex flex-col gap-4 p-2 items-center">
           {currentDecadeEvents.length > 0
             ? currentDecadeEvents.map((timelineEvent) => {
