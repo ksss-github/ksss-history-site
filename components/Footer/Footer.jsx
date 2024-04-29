@@ -18,11 +18,11 @@ const Footer = () => {
         </div>
         <div className='website__container'>
           <h4 className='footer__h5'>WEBSITE</h4>
-          <ul>
-            <li>Om oss</li>
-            <li>www.ksss.se</li>
-            <li>Cookies</li>
-            <li>GDPR</li>
+          <ul className='footer-ul'>
+            <li className='footer-li'>Om oss</li>
+            <li className='footer-li'>www.ksss.se</li>
+            <li className='footer-li'>Cookies</li>
+            <li className='footer-li'>GDPR</li>
           </ul>
         </div>
         <div className='footer__copyright'>© Kungliga Svenska Segel Sällskapet 2024</div>

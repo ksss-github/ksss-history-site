@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import classnames from "classnames";
 import "./multiRangeSlider.css";

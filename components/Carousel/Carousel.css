@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5px;
-  width: 100vw; /* Set width to 100% of viewport width */
+  width: 100%; /* Set width to 100% of viewport width */
   height: 70vh; /* Set height to 70% of viewport height */
   position: relative;
   overflow: hidden;
@@ -153,8 +152,6 @@
 .carousel__items {
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   list-style-type: none;
   width: 100%;
   height: 600px;

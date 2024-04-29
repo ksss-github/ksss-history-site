@@ -30,8 +30,8 @@
   line-height: 1rem;
 }
 
-ul,
-li {
+.footer-ul,
+.footer-li {
   list-style-type: none;
   margin-bottom: 1rem;
   margin-top: 1rem;
