@@ -25,8 +25,8 @@ const Footer = () => {
             <li className='footer-li'>GDPR</li>
           </ul>
         </div>
-        <div className='footer__copyright'>© Kungliga Svenska Segel Sällskapet 2024</div>
-      </div>
+      </div>  
+      <div className='footer__copyright'><p className='credits__p'>© Kungliga Svenska Segel Sällskapet 2024</p></div>
       
     </div>
   );
