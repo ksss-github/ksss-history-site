@@ -1,5 +1,6 @@
 "use client";
 import "./Carousel.css";
+import "../../app/globals.css";
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaAngleLeft } from "react-icons/fa";

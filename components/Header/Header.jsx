@@ -1,7 +1,7 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { IoSearch } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import "./Header.css";
@@ -39,18 +39,18 @@ const Header = () => {
     <header
       className={`header ${isLargeScreen ? "large-screen" : "small-screen"}`}
     >
-      <div>
+      <div className="header-logo-container">
         <Image
           className="navbar__ksss-logo"
           src="/logo.png"
           alt="KSSS Logo"
-          width={90}
-          height={90}
+          width={65}
+          height={65}
         />
       </div>
       {isLargeScreen ? (
-        <nav>
-          <ul>
+        <nav className="header-navbar">
+          <ul className="header-navbar-list">
             <li
               className={`navbar-links ${
                 activeLink === "home" ? "active" : ""
@@ -91,7 +91,6 @@ const Header = () => {
               </Link>
             </li>
             <li className="navbar-links">
-              <IoSearch className="search-icon" style={{ fontSize: "24px" }} />
               <button className="language-button">
                 <Image
                   className="swedish-flag"
@@ -144,8 +143,8 @@ const Header = () => {
           {showMenu && (
             <div className={`navbar__menu ${showMenu ? "open" : ""}`}>
               <IoClose className="close-icon" onClick={toggleMenu} />
-              <nav>
-                <ul>
+              <nav >
+                <ul className="header-hamburger-list">
                   <li className="menu-links">
                     <Link href="/">HEMSIDAN</Link>
                   </li>

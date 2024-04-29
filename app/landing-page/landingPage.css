@@ -4,7 +4,6 @@
   justify-content: space-around;
   margin: auto;
   text-align: center;
-  padding: 0.4rem;
   background-color: var(--offwhite);
 }
 
@@ -28,21 +27,25 @@
 }
 
 .landingpage__updates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 3rem;
+  flex: 1;
 }
 
-.ulandingpage__h2 {
+.landingpage__h2 {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 2rem;
   text-align: center;
   font-family: Montserrat;
   color: var(--mainblue);
 }
-.updates__p {
+.landingpage__p {
   font-weight: 100;
   text-align: center;
-  font-size: medium;
+  font-size: 1rem;
   font-family: baskervville;
   color: var(--mainblue);
 }
@@ -50,6 +53,7 @@
 .event__section {
   background-color: var(--mainblue);
   color: var(--offwhite);
+  padding: 1rem 0 3rem;
 }
 
 .event__card {
@@ -64,19 +68,22 @@
 .landingpage__omoss {
   background-image: url(../../public/images/group.png);
   background-size: cover;
+  background-position: center;
   padding: 2rem;
   color: var(--offwhite);
   text-align: center;
   font-size: 1.2rem;
   font-family: Baskervville;
-  margin-bottom: 1rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .landingpage__h6 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: medium;
-  margin-top: 8rem;
 }
 
 .landingpage__omoss__p {
@@ -86,54 +93,37 @@
   font-size: small;
 }
 
+.landing-page-separator{
+  height: 2.5rem;
+  background-color: var(--gold);
+}
+
+
 @media only screen and (min-width: 768px) {
   img.landingpage__hero {
     width: 100%;
     height: auto;
     margin: auto;
   }
-
-  .landingpage__updates {
-  }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .landingpage__section {
     display: flex;
     flex-direction: column;
   }
 
   img.landingpage__hero {
-    width: 40%;
+    width: 50%;
     height: auto;
     margin: auto;
-  }
-
-  .landingpage__content {
-    padding: 4rem;
+    flex: 1;
   }
 
   .landingpage__content {
     display: flex;
     flex-direction: row;
-    margin: auto;
   }
 
-  .landingpage__updates {
-    padding: 7rem;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-  }
-
-  .landingpage__omoss {
-    width: 89rem;
-    height: 25rem;
-    justify-content: center;
-    margin-left: 9rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 5rem;
-    margin-top: 1rem;
-    background-position: center;
-  }
+  
 }

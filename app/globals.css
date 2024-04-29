@@ -9,3 +9,8 @@
   --gold: #b38e49;
   --red: #be1c28;
 }
+
+body{
+  padding-top: 80px;
+}
+
