@@ -57,68 +57,6 @@ export async function getFullEvent(slug) {
   }
 }
 
-// Fetches all timeline events
-
-// export async function getTimeline(): Promise<Timeline[]> {
-//   try {
-//     return await createClient(clientConfig).fetch(
-//       groq`*[_type == "timeline"]{
-//         _id,
-//         _createdAt,
-//         title,
-//         "slug": slug.current,
-//         date,
-//         location,
-//         content,
-//         "image": {
-//     "url": image.asset->url,
-//     "alt": image.alt
-//   },
-//         "gallery": gallery[]{
-//     "url": asset->url,
-//     "alt": alt
-//   },
-//         relatedLinks
-//       }`
-//     )
-//   } catch (error) {
-//     console.error('Error fetching timeline:', error);
-//     return [];
-//   }
-// }
-//        "tags": tags[]->{
-//   "title": name,
-//   "id": value.current
-// }
-
-// export async function getYearBooks() {
-//   try {
-//     return await createClient(clientConfig).fetch(
-//       groq`*[_type == "yearBook"]{
-//         year,
-//         "pdf": pdf.asset->url
-//       }`
-//     );
-//   } catch (error) {
-//     console.error("Error fetching yearBooks:", error);
-//     return [];
-//   }
-// }
-
-// export async function getPdfYearBooks() {
-//   try {
-//     return await createClient(clientConfig).fetch(
-//       groq`*[_type == "pdfyearBook"]{
-//         pdfyear,
-//         "pdf": pdf.asset->url
-//       }`
-//     );
-//   } catch (error) {
-//     console.error("Error fetching pdfyearBooks:", error);
-//     return [];
-//   }
-// }
-
 export async function getPdfYearBooks() {
   try {
     return await createClient(clientConfig).fetch(
