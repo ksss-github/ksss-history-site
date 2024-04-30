@@ -6,7 +6,16 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import "./imageGallery.css"
 
+/**
+ * ImageGallery component for displaying a gallery of images.
+ * @param {Object} props - The props object.
+ * @param {Array} props.images - The list of images.
+ */
 export default function ImageGallery({ images }) {
+  /**
+   * State to track the current image.
+   * @type {Object}
+   */
   const [currentImage, setCurrentImage] = useState(() => {
     if (images && images.length > 0) {
       return images[0];

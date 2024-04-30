@@ -6,12 +6,36 @@ import Image from "next/image";
 import Link from "next/link";
 import "./Header.css";
 
+/**
+ * Header component for the application.
+ */
 const Header = () => {
+  /**
+   * State to track if the screen is large.
+   * @type {boolean}
+   */
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
-  const [activeLink, setActiveLink] = useState(""); // State to track active link
 
+  /**
+   * State to track if the menu is shown.
+   * @type {boolean}
+   */
+  const [showMenu, setShowMenu] = useState(false);
+
+  /**
+   * State to track the active link.
+   * @type {string}
+   */
+  const [activeLink, setActiveLink] = useState(""); 
+
+  /**
+   * Effect hook to handle window resize events.
+   */
   useEffect(() => {
+    /**
+     * Handler for window resize events.
+     * Sets isLargeScreen state based on window width.
+     */
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth > 904);
     };
@@ -26,6 +50,9 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  /**
+   * Function to toggle the visibility of the menu.
+   */
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };

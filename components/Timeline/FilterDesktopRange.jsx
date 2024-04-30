@@ -8,12 +8,24 @@ import {
   handleFilterChange,
 } from "./filter-utils";
 
+/**
+ * FilterDesktopRange component for filtering data based on categories and decades.
+ * @param {Object} props - The props object.
+ * @param {Array} props.timelineData - The timeline data.
+ * @param {Array} props.categoriesToFilter - The categories to filter.
+ * @param {Function} props.setCategoriesToFilter - The function to set the categories to filter.
+ * @param {Function} props.setDecadesToFilter - The function to set the decades to filter.
+ */
 export default function FilterDesktopRange({
   timelineData,
   categoriesToFilter,
   setCategoriesToFilter,
   setDecadesToFilter,
 }) {
+  /**
+   * State to track if the filter is reset.
+   * @type {boolean}
+   */
   const [isReset, setIsReset] = useState(false);
 
   // GET ALL CATEGORIES FOR FILTERING
@@ -25,6 +37,9 @@ export default function FilterDesktopRange({
     categoriesToFilter
   );
 
+  /**
+   * Function to handle filter reset.
+   */
   // HANDLE FILTER RESET BUTTON
   function handleFilterReset() {
     setCategoriesToFilter(["main"]);

@@ -1,6 +1,18 @@
 import React from 'react'
 import MultiRangeSlider from '../MultiRangeSlider/MultiRangeSlider'
 
+/**
+ * FilterMobile component for filtering data based on categories and decades.
+ * @param {Object} props - The props object.
+ * @param {boolean} props.showFilter - The state indicating whether the filter is shown.
+ * @param {Function} props.setShowFilter - The function to set the showFilter state.
+ * @param {Array} props.categories - The list of categories.
+ * @param {Array} props.selectedCategories - The list of selected categories.
+ * @param {Function} props.handleFilterChange - The function to handle filter changes.
+ * @param {Function} props.handleFilterReset - The function to handle filter resets.
+ * @param {Array} props.decades - The list of decades.
+ * @param {Function} props.setValue - The function to set the value of the range slider.
+ */
 export default function FilterMobile({ showFilter, setShowFilter, categories, selectedCategories, handleFilterChange, handleFilterReset, decades, setValue }) {
   return (
     <div
@@ -26,6 +38,7 @@ export default function FilterMobile({ showFilter, setShowFilter, categories, se
           
           <div className="bg-white">
             <p className="px-2">ÅRTIONDE</p>
+            {/* MultiRangeSlider component for selecting a range of decades */}
             <MultiRangeSlider
               min={decades[0]}
               max={decades[decades.length - 1]}

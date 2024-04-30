@@ -8,24 +8,35 @@ import {
   handleFilterChange,
 } from "./filter-utils";
 
+/**
+ * FilterMobileRange component for filtering data based on categories and decades.
+ * @param {Object} props - The props object.
+ * @param {Array} props.timelineData - The timeline data.
+ * @param {Array} props.categoriesToFilter - The categories to filter.
+ * @param {Function} props.setCategoriesToFilter - The function to set the categories to filter.
+ * @param {Function} props.setDecadesToFilter - The function to set the decades to filter.
+ */
 export default function FilterMobileRange({
   timelineData,
   categoriesToFilter,
   setCategoriesToFilter,
   setDecadesToFilter,
-  showFilter,
-  setShowFilter
 }) {
+  /**
+   * State to track if the filter is reset.
+   * @type {boolean}
+   */
   const [isReset, setIsReset] = useState(false);
-
-  // GET ALL CATEGORIES FOR FILTERING
-  const allCategories = getAllCategoriesFilter(timelineData);
 
   // GET ALL DECADES FOR FILTERING
   const allDecadesFromCategoriesToFilter = getAllDecadesFilter(
     timelineData,
     categoriesToFilter
   );
+
+  /**
+   * Function to handle filter reset.
+   */
 
   // HANDLE FILTER RESET BUTTON
   function handleFilterReset() {

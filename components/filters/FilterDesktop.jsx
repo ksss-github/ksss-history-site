@@ -1,6 +1,17 @@
 import React from 'react'
 import MultiRangeSlider from '../MultiRangeSlider/MultiRangeSlider'
 
+/**
+ * FilterDesktop component for filtering data based on categories and decades.
+ * @param {Object} props - The props object.
+ * @param {Array} props.categories - The list of categories.
+ * @param {Array} props.selectedCategories - The list of selected categories.
+ * @param {Function} props.handleFilterChange - The function to handle filter changes.
+ * @param {Function} props.handleFilterReset - The function to handle filter resets.
+ * @param {Array} props.decades - The list of decades.
+ * @param {Function} props.setValue - The function to set the value of the range slider.
+ * @param {Array} props.value - The current value of the range slider.
+ */
 export default function FilterDesktop({ categories, selectedCategories, handleFilterChange, handleFilterReset, decades, setValue, value }) {
 
   return (
@@ -14,6 +25,7 @@ export default function FilterDesktop({ categories, selectedCategories, handleFi
           
           <div className="bg-white">
             <p className="px-2">ÅRTIONDE</p>
+            {/* MultiRangeSlider component for selecting a range of decades */}
             <MultiRangeSlider
               min={decades[0]}
               max={decades[decades.length - 1]}
@@ -23,6 +35,7 @@ export default function FilterDesktop({ categories, selectedCategories, handleFi
           <div className="px-2">
             <p>KATEGORIER</p>
           <ul className="flex flex-wrap gap-2 py-2">
+            {/* Map over the categories and create a list item for each one */}
             {categories.map((cat, index) => (
               <li key={index} style={{ listStyleType: "none", margin: 0}}>
                 <label

@@ -6,25 +6,48 @@ import Image from "next/image";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import BtnDark from "../button/BtnDark.jsx";
-
+/**
+ * Carousel component for displaying a series of images.
+ */
 const Carousel = () => {
+  /**
+   * The active index state represents the current image being displayed in the carousel.
+   * @type {number}
+   */
   const [activeIndex, setActiveIndex] = useState(0);
 
+  /**
+   * Handle input change event.
+   * @param {number} index - The new active index.
+   */
   const handleInputChange = (index) => {
     setActiveIndex(index);
   };
 
+  /**
+   * Handle the event when the next button is clicked.
+   * If the current image is the last one, it will wrap around to the first image.
+   */
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === imageUrls.length - 1 ? 0 : prevIndex + 1
     );
   };
 
+  /**
+   * Handle the event when the previous button is clicked.
+   * If the current image is the first one, it will wrap around to the last image.
+   */
   const handlePrev = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? imageUrls.length - 1 : prevIndex - 1
     );
   };
+
+  /**
+   * The information for the images to be displayed in the carousel.
+   * @type {Array}
+   */
 
   const imageInfo = [
     {

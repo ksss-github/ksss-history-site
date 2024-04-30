@@ -1,4 +1,10 @@
 // Description: This file contains utility functions for the filter mobile and desktop component.
+
+/**
+ * Function to get all categories from the timeline data.
+ * @param {Array} timelineData - The timeline data.
+ * @returns {Array} - The array of all categories.
+ */
 export function getAllCategoriesFilter(timelineData) {
   let categoriesSet = new Set(
     timelineData.reduce((acc, event) => acc.concat(event.tagIds), [])
@@ -12,6 +18,12 @@ export function getAllCategoriesFilter(timelineData) {
   return categoriesArray;
 }
 
+/**
+ * Function to get all decades from the timeline data.
+ * @param {Array} timelineData - The timeline data.
+ * @param {Array} categoriesToFilter - The categories to filter.
+ * @returns {Array} - The array of all decades.
+ */
 export function getAllDecadesFilter(timelineData, categoriesToFilter) {
   let filteredCategories = timelineData.filter((event) =>
     event.tagIds.some((tagId) => categoriesToFilter.includes(tagId))
@@ -31,6 +43,12 @@ export function getAllDecadesFilter(timelineData, categoriesToFilter) {
   return allDecadesArray;
 }
 
+/**
+ * Function to handle filter changes.
+ * @param {Object} e - The event object.
+ * @param {Function} setCategoriesToFilter - The function to set the categories to filter.
+ * @param {Array} categoriesToFilter - The categories to filter.
+ */
 export function handleFilterChange(e, setCategoriesToFilter, categoriesToFilter){
   const value = e.target.value;
 
