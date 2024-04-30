@@ -39,7 +39,6 @@ export default function FilterMobileRange({
     ]);
   }
 
-  console.log("hello from MOBILE")
 
   return (
     <div

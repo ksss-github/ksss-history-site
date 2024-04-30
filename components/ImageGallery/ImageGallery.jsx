@@ -16,19 +16,20 @@ export default function ImageGallery({ images }) {
   return images && (
     <section className="flex flex-col gap-4">
       <div className="h-[20rem] flex justify-center">
-        <img src={currentImage.url} alt={currentImage.alt} className="h-full" />
+        <img src={currentImage.url} alt={currentImage.alt} className="h-full rounded-lg " />
       </div>
       <div className="flex items-center gap-2 justify-center overflow-x-auto">
         <div className="text-2xl text-[var(--mainblue)]"><FontAwesomeIcon icon={faChevronLeft} /></div>
-        <div className="h-40 slider flex items-center overflow-x-auto">
+        <div className="h-25 slider flex items-center overflow-x-auto">
           <div
             style={{
               display: "grid",
               gridTemplateColumns: `repeat(${images.length}, 50px)`,
             }}
-            className={`gap-4 overflow-x-auto slider snap-x px-2 py-4 flex-1 `}
+            className={`gap-8 overflow-x-auto slider snap-x px-4 py-4 flex-1 `}
           >
             {images.map((item) => (
+              <div className="h-[70px] w-[70px] shadow-md shadow-gray-400 snap-start rounded-lg flex items-center bg-[var(--mainblue)]">
               <Image
                 key={crypto.randomUUID()}
                 src={item.url}
@@ -36,8 +37,9 @@ export default function ImageGallery({ images }) {
                 width={100}
                 height={100}
                 onClick={() => setCurrentImage(item)}
-                className="cursor-pointer shadow-md shadow-gray-400 snap-start bg-white rounded-lg object-cover w-full"
+                className="cursor-pointer shadow-md  bg-white object-cover w-full"
               />
+            </div>
             ))}
           </div>
         </div>

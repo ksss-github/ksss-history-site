@@ -40,7 +40,7 @@ export default function FilterDesktopRange({
 
   return (
     <div
-      className={`hidden md:flex z-20 font-[600] text-[1.2rem] flex-col gap-4 border-r border-[#f4f4f4]`}
+      className={`hidden md:flex z-20 font-[600] text-[1.2rem] flex-col gap-4 border-r-[2px] border-[#f7f7f7]`}
     >
       <div className="p-2 flex gap-2 font-bold">
         <span>FILTER</span>

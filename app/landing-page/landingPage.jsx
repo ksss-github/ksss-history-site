@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import BtnLight from "../../components/button/BtnLight";
+import BtnLight from "../../components/Button/BtnLight";
 import "./landingPage.css";
 import LandingPage__card from "../../components/LandingPage__card/LandingPage__card";
 import afore2013 from "../../public/images/afore2013.jpg";

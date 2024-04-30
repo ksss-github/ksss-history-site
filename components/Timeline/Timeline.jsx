@@ -7,6 +7,8 @@ import FilterDesktopRange from "./FilterDesktopRange";
 import FilterMobileRange from "./FilterMobileRange";
 import RulerLines from "./RulerLines";
 import { useMediaQuery } from 'react-responsive';
+import { faFilter } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Timeline({ timelineData }) {
   const [categoriesToFilter, setCategoriesToFilter] = useState(["main"]);
@@ -117,7 +119,6 @@ export default function Timeline({ timelineData }) {
     }
   }, [currentDecadeOnSlider]);
 
-  console.log("hello from timeline")
 
   return (
     <div>
@@ -131,14 +132,14 @@ export default function Timeline({ timelineData }) {
       />}
 
       {/* Timeline */}
-      <div className=" bg-[#fff] flex flex-col gap-3 relative">
+      <div className=" bg-[#fff] flex flex-col relative">
         {/* div containing the filter button */}
-        <div className="md:hidden">
+        <div className="md:hidden  bg-[var(--mainblue)] border-b border-[#3a3a3a] flex justify-center p-1">
           <button
-            className="bg-[#c2c2c2] rounded-md px-4 py-1"
+            className="bg-[var(--mainblue)] text-white rounded-xl px-4 py-1 font-bold"
             onClick={() => setShowFilter((c) => !c)}
           >
-            FILTER
+            <FontAwesomeIcon icon={faFilter} /> FILTER
           </button>
         </div>
 

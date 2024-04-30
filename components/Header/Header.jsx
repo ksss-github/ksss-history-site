@@ -57,7 +57,7 @@ const Header = () => {
               }`}
             >
               <Link href="/" onClick={() => handleLinkClick("home")}>
-                HEMSIDAN
+                HEM
               </Link>
             </li>
             <li
@@ -69,7 +69,7 @@ const Header = () => {
                 href="/timeline"
                 onClick={() => handleLinkClick("timeline")}
               >
-                HISTORISK TIDSLINJEN
+                HISTORISK TIDSLINJE
               </Link>
             </li>
             <li
@@ -78,7 +78,7 @@ const Header = () => {
               }`}
             >
               <Link href="/yearbook" onClick={() => handleLinkClick("books")}>
-                ÅRSBOCKERNA
+                ÅRSBOCKER
               </Link>
             </li>
             <li
@@ -146,16 +146,16 @@ const Header = () => {
               <nav >
                 <ul className="header-hamburger-list">
                   <li className="menu-links">
-                    <Link href="/">HEMSIDAN</Link>
+                    <Link href="/" onClick={toggleMenu}>HEM</Link>
                   </li>
                   <li className="menu-links">
-                    <Link href="/timeline">HISTORISK TIDSLINJEN</Link>
+                    <Link href="/timeline" onClick={toggleMenu}>HISTORISK TIDSLINJEN</Link>
                   </li>
                   <li className="menu-links">
-                    <Link href="/">ÅRSBÖCKER</Link>
+                    <Link href="/yearbook" onClick={toggleMenu}>ÅRSBÖCKER</Link>
                   </li>
                   <li className="menu-links">
-                    <Link href="/">OM KSSS</Link>
+                    <Link href="/about-us" onClick={toggleMenu}>OM KSSS</Link>
                   </li>
                 </ul>
               </nav>

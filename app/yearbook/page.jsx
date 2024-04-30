@@ -1,5 +1,5 @@
 "use client";
-import YearBooksComponent from "../../components/yearbook/YearBooksComponent";
+import YearBooksComponent from "../../components/Yearbook/YearBooksComponent";
 
 function Yearbook() {
   return (

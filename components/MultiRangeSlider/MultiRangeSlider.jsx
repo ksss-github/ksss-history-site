@@ -60,7 +60,6 @@ const MultiRangeSlider = ({ isReset, onReset, min, max, onChange }) => {
     }
   }, [isReset, min, max, onReset]);
 
-  console.log(minVal, maxVal, "minVal, maxVal")
 
   return (
     <div className="slider-container">

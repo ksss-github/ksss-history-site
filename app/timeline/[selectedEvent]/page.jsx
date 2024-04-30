@@ -15,12 +15,12 @@ export default async function currentEvent({ params }) {
 
       <section className="border-t border-[#bcbcbc] py-2 px-2 flex flex-col gap-4">
         <div className="text-center">
-        <h1 className="text-[1.2rem] font-bold">{currentEvent.title.toUpperCase()}</h1>
+        <h1 className="text-[1.8rem] font-bold">{currentEvent.title.toUpperCase()}</h1>
         <p>{currentEvent.location}</p>
         </div>
       <div className="flex flex-col gap-4 text-[var(--mainblue)]">
-        <p className="text-xl font-bold">{year}</p>
-        <div className="font-baskervville"><PortableText value={currentEvent.content} /></div>
+        <p className="text-2xl font-bold ">{year}</p>
+        <div className="font-baskervville text-xl"><PortableText value={currentEvent.content} /></div>
       </div>
       </section>
 
