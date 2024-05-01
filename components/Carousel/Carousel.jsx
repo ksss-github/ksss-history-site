@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
-import BtnDark from "../Button/BtnDark.jsx";
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
