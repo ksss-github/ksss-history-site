@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import './LandingPage__card.css';
-import {BtnLight} from '../Button/BtnLight.jsx';
+import {BtnLight} from '../button/BtnLight.jsx';
 
 const LandingPage__card = ({ events }) => {
   return (
