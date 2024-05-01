@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Btn.css";
 
-const BtnLight = ({ onClick, disabled, children, className }) => {
+export const BtnLight = ({ onClick, disabled, children, className }) => {
   return (
     <button
       onClick={onClick}
@@ -27,4 +27,3 @@ BtnLight.defaultProps = {
   className: "",
 };
 
-export default BtnLight;

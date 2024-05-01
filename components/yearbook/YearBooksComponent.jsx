@@ -6,7 +6,7 @@ import YearBookSubHeader from "./YearBookSubHeader";
 import { getPdfYearBooks } from "../../sanity/sanity-utils"; // Import the function to fetch yearBooks from Sanity
 import "./YearBooksComponent.css";
 
-const YearBooksComponent = () => {
+export default function YearBooksComponent(){
   const [yearBooks, setYearBooks] = useState([]); // State to hold yearBooks data
 
   const [showLogin, setShowLogin] = useState(true); // State to control login form visibility
@@ -131,4 +131,3 @@ const YearBooksComponent = () => {
   );
 };
 
-export default YearBooksComponent;
