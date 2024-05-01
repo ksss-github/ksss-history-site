@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import './LandingPage__card.css';
 import BtnLight from '../Button/BtnLight.jsx';
