@@ -1,6 +1,6 @@
 import React from 'react';
-import BtnLight from '../Button/BtnLight';
 import './LandingPage__card.css';
+import BtnLight from '../Button/BtnLight';
 
 const LandingPage__card = ({ events }) => {
   return (
