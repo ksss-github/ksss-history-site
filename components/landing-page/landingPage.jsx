@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import {BtnLight} from "../../components/button/BtnLight";
+import {BtnLight} from "../button/BtnLight";
 import "./landingPage.css";
-import LandingPage__card from "../../components/LandingPage__card/LandingPage__card";
-import Carousel from "../../components/Carousel/Carousel";
+import LandingPage__card from "../LandingPage__card/LandingPage__card";
+import Carousel from "../Carousel/Carousel";
 import Link from 'next/link'; // Import Link from 'next/link'
 
 export default function LandingPage() {

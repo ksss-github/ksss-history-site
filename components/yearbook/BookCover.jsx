@@ -1,3 +1,4 @@
+"use client"
 import "./BookCover.css";
 
 function BookCover({ pdfyear, pdfurl }) {

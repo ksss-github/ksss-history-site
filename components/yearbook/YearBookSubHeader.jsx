@@ -1,3 +1,4 @@
+"use client"
 import "./YearBookSubHeader.css";
 
 function YearBookSubHeader() {

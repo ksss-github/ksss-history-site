@@ -1,3 +1,4 @@
+"use client"
 import BookCover from "./BookCover";
 
 function PDFBookViewer({ pdf, pdfyear }) {
