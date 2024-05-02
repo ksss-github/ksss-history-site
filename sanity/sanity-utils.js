@@ -47,7 +47,10 @@ export async function getFullEvent(slug) {
     "url": asset->url,
     "alt": alt
   },
-        relatedLinks
+  "relatedLinks": relatedLinks[]{
+    "title": title,
+    "url": url
+  }
       }`,
       { slug }
     );

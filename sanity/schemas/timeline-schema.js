@@ -77,7 +77,21 @@ const timeline = {
       type: "array",
       of: [
         {
-          type: "string"
+          type: "object",
+          fields: [
+            {
+              title: "Title",
+              name: "title",
+              type: "string",
+              description: "Title of the link."
+            },
+            {
+              title: "URL",
+              name: "url",
+              type: "url",
+              description: "URL of the link must include full path. Example: http:// or https://."
+            }
+          ]
         }
       ],
       description: "Add links related to the event."

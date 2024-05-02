@@ -29,9 +29,8 @@ export default function ImageGallery({ images }) {
             className={`gap-8 overflow-x-auto slider snap-x px-4 py-4 flex-1 `}
           >
             {images.map((item) => (
-              <div className="h-[70px] w-[70px] shadow-md shadow-gray-400 snap-start rounded-lg flex items-center bg-[var(--mainblue)]">
+              <div className="h-[70px] w-[70px] shadow-md shadow-gray-400 snap-start rounded-lg flex items-center bg-[var(--mainblue)]" key={crypto.randomUUID()}>
               <Image
-                key={crypto.randomUUID()}
                 src={item.url}
                 alt={item.alt || "image"}
                 width={100}

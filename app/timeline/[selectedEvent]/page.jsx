@@ -8,6 +8,8 @@ export default async function currentEvent({ params }) {
   const slug = params.selectedEvent;
   const currentEvent = await getFullEvent(slug);
   const year = currentEvent.date.slice(0, 4);
+  console.log(currentEvent, "currentEvent")
+
 
   return (
     <article className=" max-w-[60rem] mx-auto flex flex-col gap-4 p-4">
@@ -31,7 +33,7 @@ export default async function currentEvent({ params }) {
           {currentEvent.relatedLinks &&
             currentEvent.relatedLinks.map((link) => {
               console.log(link)
-              return <a href={`${link}`} target="_blank" key={crypto.randomUUID()} className='px-4 py-2 rounded-2xl border-2 border-[#0b5883] bg-[var(--lightblue)] text-white text-xs font-bold shadow-md shadow-gray-400 self-start'>{link}</a>;
+              return <a href={`${link.url}`} target="_blank" key={crypto.randomUUID()} className='px-4 py-2 rounded-2xl border-2 border-[#0b5883] bg-[var(--lightblue)] text-white text-xs font-bold shadow-md shadow-gray-400 self-start'>{link.title}</a>;
             })}
         </div>
       </section>
