@@ -9,7 +9,7 @@ const Footer = () => {
           <h4 className='footer__h5'>KONTAKT</h4>
           <div className='email__info__container'>
             <p className='email_p'>EMAIL</p> 
-            <p className='footer__email__address__p'>kssshistory@ksss.se</p>
+            <a href="mailto:kssshistory@ksss.se" className='footer__email__address__p'>kssshistory@ksss.se</a>
           </div>
           <div className='number__info'>
             <p className='footer__telefon__p'>TELEFON</p> 
@@ -19,10 +19,9 @@ const Footer = () => {
         <div className='website__container'>
           <h4 className='footer__h5'>WEBSITE</h4>
           <ul className='footer-ul'>
-            <li className='footer-li'>Om oss</li>
-            <li className='footer-li'>www.ksss.se</li>
-            <li className='footer-li'>Cookies</li>
-            <li className='footer-li'>GDPR</li>
+            <li className='footer-li'><a href="/about-us">Om oss</a></li>
+            <li className='footer-li'><a href="https://www.ksss.se/" target='_blank'>www.ksss.se</a></li>
+            <li className='footer-li'>GDPR (pending)</li>
           </ul>
         </div>
       </div>  
