@@ -39,7 +39,7 @@ const Header = () => {
     <header
       className={`header ${isLargeScreen ? "large-screen" : "small-screen"}`}
     >
-      <div className="header-logo-container">
+      <a href="/" className="header-logo-container">
         <Image
           className="navbar__ksss-logo"
           src="/logo.png"
@@ -47,7 +47,7 @@ const Header = () => {
           width={65}
           height={65}
         />
-      </div>
+      </a>
       {isLargeScreen ? (
         <nav className="header-navbar">
           <ul className="header-navbar-list">

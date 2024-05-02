@@ -40,6 +40,7 @@
 .event__year {
   font-size: 1.3rem;
   font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.81);
 }
 
 .event__description {
@@ -47,6 +48,7 @@
   color: var(--offwhite);
   font-weight: 600;
   margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.81);
 }
 
 .event__h3 {
