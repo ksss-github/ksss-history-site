@@ -63,7 +63,8 @@ const timeline = {
             name: "alt",
             title: "Alt",
             type: "string"
-          }
+          },
+          { name: "caption", title: "Caption", type: "string", validation: (Rule) => Rule.required()}
         ] }
       ],
       options: {

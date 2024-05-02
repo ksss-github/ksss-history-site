@@ -45,7 +45,8 @@ export async function getFullEvent(slug) {
   },
         "gallery": gallery[]{
     "url": asset->url,
-    "alt": alt
+    "alt": alt,
+    "caption": caption
   },
   "relatedLinks": relatedLinks[]{
     "title": title,

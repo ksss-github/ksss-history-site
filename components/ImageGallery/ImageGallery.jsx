@@ -15,8 +15,9 @@ export default function ImageGallery({ images }) {
 
   return images && (
     <section className="flex flex-col gap-4">
-      <div className="h-[20rem] flex justify-center">
+      <div className="h-[20rem] flex flex-col justify-center items-center">
         <img src={currentImage.url} alt={currentImage.alt} className="h-full rounded-lg object-cover " />
+        <div>{currentImage.caption}</div>
       </div>
       <div className="flex items-center gap-2 justify-center overflow-x-auto">
         <div className="text-2xl text-[var(--mainblue)]"><FontAwesomeIcon icon={faChevronLeft} /></div>
