@@ -1,55 +1,45 @@
 .event__container {
-  overflow-y: hidden;
+  background-color: var(--mainblue);
+  color: var(--offwhite);
+  padding: 2rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.event__card__container {
+.event__card__container{
   display: flex;
   gap: 1rem;
-  padding: 1.5rem;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  align-items: flex-end;
 }
 
 .event__card {
+  width: 18rem;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 1rem;
-  padding-top: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  min-width: 14rem;
-  height: 18rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .event__card {
+    width: 30rem;
+    height: 30rem;
+  }
 }
 
 .event__card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.event__card.background-1 {
-  background-image: url("../../public/images/Fidra1.png");
-  background-size: cover;
-}
-
-.event__card.background-2 {
-  background-image: url("/images/image8.png");
-  background-size: cover;
-}
-
-.event__card.background-3 {
-  background-image: url("/images/Kvinliga.jpg");
-  background-size: cover;
-}
-
-.event__content {
-  width: 100%;
-}
-
 .event__year {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--offwhite);
 }
 
 .event__description {
@@ -60,36 +50,17 @@
 }
 
 .event__h3 {
-  font-size: larger;
+  font-size: 2rem;
   font-weight: 600;
-  padding-top: 1rem;
-  padding-left: 1.4rem;
 }
 
-@media only screen and (min-width: 1200px) {
-  .event__card {
-    min-width: 28%;
-    min-height: 24rem;
-    row-gap: 5rem;
-  }
-
-  .event__card.background-1 {
-    background-size: cover;
-  }
-
-  .event__card.background-2 {
-    background-size: cover;
-  }
-
-  .event__card.background-3 {
-    background-size: cover;
-  }
-
-  .event__card__container {
-    justify-content: center;
-  }
-
-  .event__h3 {
-    margin-left: 5rem;
-  }
+.landingpage-btn-light{
+  background-color: var(--lightblue);
+  color: var(--offwhite);
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: small;
+  width: auto;
+  border: 0.1rem solid var(--gold);
 }

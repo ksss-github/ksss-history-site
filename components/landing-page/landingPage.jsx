@@ -6,21 +6,12 @@ import LandingPage__card from "../LandingPage__card/LandingPage__card";
 import Carousel from "../Carousel/Carousel";
 import Link from 'next/link'; // Import Link from 'next/link'
 
-export default function LandingPage() {
-  const events = [
-    {
-      Year: "1905",
-      description: "Svenska Seglarförbundet bildas",
-    },
-    {
-      Year: "2007",
-      description: "175-års jubileum",
-    },
-    {
-      Year: "1897",
-      description: "Kvinnor får gå med i KSSS",
-    },
-  ];
+export default function LandingPage({ timeline }) {
+ 
+
+  const filteredEvents = timeline.filter((event) => event.tagIds.some(tag => tag.includes("main"))).sort((a, b) => a.date > b.date ? 1 : -1);
+
+  console.log(filteredEvents, "filteredEvents")
 
   return (
     <div>
@@ -60,7 +51,7 @@ export default function LandingPage() {
 
       <section className="landingpage__historia__container">
         <div className="landingpage__historia">
-          <LandingPage__card events={events} />
+          <LandingPage__card timeline={timeline} />
         </div>
       </section>
 

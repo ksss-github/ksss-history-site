@@ -31,24 +31,28 @@ const Carousel = () => {
       description:
         "Dyk ner i de fängslande krönikorna från vår segelklubbs resa över vägarna. Interagera med tidslinjen för att börja utforska!",
       buttonContent: "UTFORSKA TIDSLINJEN",
+      url: "/timeline",
     },
     {
       title: "TILLGÅNG TILL ALLA ÅRSBÖCKER",
       description:
         "KSSS grundades i Stockholm 1830 under namnet Svenska Segel Sällskapet",
       buttonContent: "ÅRSBÖCKER",
+      url: "yearbooks",
     },
     {
       title: "DET FÖRSTA GOTLAND RUNT",
       description:
         "1937 gick första Gotland Runt av stapeln. Då gick tävlingen motsols med start och målgång utanför Visby.",
       buttonContent: "GOTLAND RUNT",
+      url: "#"
     },
     {
       title: "JUNIORVERKSAMHET",
       description:
         "Under sommaren deltar ca 750 barn på KSSS läger på fem olika anläggningar.",
       buttonContent: "JUNIORS",
+      url: "#"
     },
   ];
 
@@ -84,11 +88,11 @@ const Carousel = () => {
               />
 
               <div className="carousel__text-overlay">
-                <h3>{imageInfo[index].title}</h3>
-                <p>{imageInfo[index].description}</p>
-                <button className="custom-button">
+                <h3 className="overlay-title">{imageInfo[index].title}</h3>
+                <p className="overlay-text">{imageInfo[index].description}</p>
+                <a href={imageInfo[index].url} className="custom-button">
                   {imageInfo[index].buttonContent}
-                </button>
+                </a>
               </div>
             </li>
           ))}

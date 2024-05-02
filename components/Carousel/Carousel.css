@@ -38,7 +38,7 @@
 }
 @media (max-width: 420px) {
   .carousel {
-    height: 26vh; /* Adjusted height for smaller screens */
+    height: 35vh; /* Adjusted height for smaller screens */
   }
 }
 
@@ -234,7 +234,7 @@
 .carousel__prev {
   position: absolute;
   color: black;
-  left: 5%;
+  left: 0%;
   z-index: 200;
 }
 
@@ -248,7 +248,7 @@
 .carousel__next {
   position: absolute;
   color: black;
-  right: 5%;
+  right: 0%;
   z-index: 200;
 }
 
@@ -260,7 +260,7 @@
 
 .carousel__nav {
   position: absolute;
-  bottom: 10%;
+  bottom: 1%;
   left: 0;
   text-align: center;
   width: 100%;
@@ -295,14 +295,30 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.899);
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 600px;
   padding: 20px;
-  color: whitesmoke;
+  color: var(--mainblue);
   text-align: center;
   font-size: x-large; /* Adjusted font size for responsiveness */
+}
+
+.overlay-title{
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.overlay-text{
+  font-size: 1rem;
+}
+
+@media (max-width: 420px) {
+  .overlay-text {
+    display: none;
+  }
 }
 
 /* Adjustments for smaller screens */
@@ -326,7 +342,6 @@ body {
 .custom-button {
   background-color: #162743; /* Navy color */
   color: var(--offwhite); /* Offwhite text color */
-  width: 11rem;
   height: 2rem;
   margin-top: 1rem;
   border: none;
@@ -334,4 +349,5 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: small;
+  padding: 0 0.5rem;
 }

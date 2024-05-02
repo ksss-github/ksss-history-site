@@ -9,6 +9,7 @@
   font-size: small;
   width: auto;
   border: 0.1rem solid var(--gold);
+  font-family: Montserrat;
 }
 
 .btn:hover {

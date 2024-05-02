@@ -8,11 +8,11 @@ export default async function currentEvent({ params }) {
   const slug = params.selectedEvent;
   const currentEvent = await getFullEvent(slug);
   const year = currentEvent.date.slice(0, 4);
-  console.log(currentEvent, "currentEvent")
 
 
   return (
-    <article className=" max-w-[60rem] mx-auto flex flex-col gap-4 p-4">
+    <section className="bg-[var(--mainblue)]">
+    <article className=" max-w-[70rem] mx-auto flex flex-col gap-4 py-4 px-10 bg-white">
       <ImageGallery images={currentEvent.gallery} />
 
       <section className="border-t border-[#bcbcbc] py-2 px-2 flex flex-col gap-4">
@@ -38,6 +38,7 @@ export default async function currentEvent({ params }) {
         </div>
       </section>
     </article>
+    </section>
   );
 }
 
