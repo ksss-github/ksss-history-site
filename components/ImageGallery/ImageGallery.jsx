@@ -16,7 +16,7 @@ export default function ImageGallery({ images }) {
   return images && (
     <section className="flex flex-col gap-4">
       <div className="h-[20rem] flex justify-center">
-        <img src={currentImage.url} alt={currentImage.alt} className="h-full rounded-lg " />
+        <img src={currentImage.url} alt={currentImage.alt} className="h-full rounded-lg object-cover " />
       </div>
       <div className="flex items-center gap-2 justify-center overflow-x-auto">
         <div className="text-2xl text-[var(--mainblue)]"><FontAwesomeIcon icon={faChevronLeft} /></div>
@@ -36,7 +36,7 @@ export default function ImageGallery({ images }) {
                 width={100}
                 height={100}
                 onClick={() => setCurrentImage(item)}
-                className="cursor-pointer shadow-md  bg-white object-cover w-full"
+                className="cursor-pointer shadow-md  bg-[var(--mainblue)] object-contain h-full w-full rounded-lg"
               />
             </div>
             ))}
