@@ -1,17 +1,15 @@
-"use client";
-import React from "react";
-import {BtnLight} from "../button/BtnLight";
-import "./landingPage.css";
-import LandingPage__card from "../LandingPage__card/LandingPage__card";
-import Carousel from "../Carousel/Carousel";
-import Link from 'next/link'; // Import Link from 'next/link'
+"use client"
+import React from "react"
+import { BtnLight } from "../button/BtnLight"
+import "./landingPage.css"
+import LandingPage__card from "../LandingPage__card/LandingPage__card"
+import Carousel from "../Carousel/Carousel"
+import Link from "next/link" // Import Link from 'next/link'
 
 export default function LandingPage({ timeline }) {
- 
-
-  const filteredEvents = timeline.filter((event) => event.tagIds.some(tag => tag.includes("main"))).sort((a, b) => a.date > b.date ? 1 : -1);
-
-  console.log(filteredEvents, "filteredEvents")
+  const filteredEvents = timeline
+    .filter((event) => event.tagIds.some((tag) => tag.includes("main")))
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
 
   return (
     <div>
@@ -60,11 +58,11 @@ export default function LandingPage({ timeline }) {
         <p className="landingpage__omoss__p">
           Träffa personerna som arbetar på att bevara KSSS historia
         </p>
-   
+
         <Link href="/about-us">
           <BtnLight>OM OSS</BtnLight>
         </Link>
       </section>
     </div>
-  );
+  )
 }
